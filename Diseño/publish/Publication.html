@@ -18,7 +18,7 @@
  </html>  
 
  <html>
-<h1 style="text-align:center;"><font size=6><font color="blue">Highpass Cauer
+<h1 style="text-align:center;"><font size=6><font color="blue">Bandpass Chebyshev I
 
 
 </font></h1>
@@ -28,16 +28,16 @@
 </font></h1>
  </html> 
  <html>
- <table border=1 align="center" ><th><p><img src="Plantillas/HighpassImg2.png" border=1 align="middle"></p>
+ <table border=1 align="center" ><th><p><img src="Plantillas/BandpassImg2.png" border=1 align="middle"></p>
 </th></table>
-  </html>
+ </html>
 
 
  
  <html>
- <table border=1 align="center"  style="background:#C2D5D3;width:300px"><th colspan="6" style="background:#536CFC">Filter Properties</th></tr>
- <tr style="background:#536CFC"> <th> Gain [dB] </th><th> Fa [Hz] </th><th> Fp [Hz] </th><th> Aa [dB] </th><th> Ap [dB] </th><th> Order </th></tr>
- <tr> <th> 0 </th><th> 11.65k </th><th> 23.3k </th><th> 50 </th><th> 1 </th><th> 4 </th></tr>
+ <table border=1 align="center"  style="background:#C2D5D3;width:300px"><th colspan="8" style="background:#536CFC">Filter Properties</th></tr>
+ <tr style="background:#536CFC"> <th> Gain [dB] </th><th> Fa<sup>-</sup> [Hz] </th><th> Fp<sup>-</sup> [Hz] </th><th> Fp<sup>+</sup> [Hz] </th><th> Fa<sup>+</sup> [Hz] </th><th> Aa [dB] </th><th> Ap [dB] </th><th> Order </th></tr>
+ <tr> <th> 5.000000e-01 </th><th> 615 </th><th> 2.07k </th><th> 12.07k </th><th> 40.62k </th><th> 50 </th><th> 5.000000e-01 </th><th> 4 </th></tr>
  </table>
  </html>
 
@@ -119,20 +119,20 @@
  </th></table>
  </html>
 
-<html><h1 style="text-align:center;"><font size=5><font color=#A32A2A> Stage N�1: SGM HighpassNotch 
+<html><h1 style="text-align:center;"><font size=5><font color=#A32A2A> Stage N�1: KHN High Pass 
 </font></h1>
  </html>  
  <html>
  <h4>
- <table border=1 align="center" ><th><p><img src="Stages Schematics/Sedra_HPNotch.png" border=1 align="middle"></p></th></table> 
+ <table border=1 align="center" ><th><p><img src="Stages Schematics/KHN_HP.PNG" border=1 align="middle"></p></th></table> 
  </h4>
  </html>
 
  
  <html>
  <table border=1 align="center"  style="background:#C2D5D3;width:300px"><th colspan="8" style="background:#536CFC">Stage Properties</th></tr>
- <tr style="background:#536CFC"> <th> Type </th> <th> Order </th><th> f<sub>0</sub> [Hz]</th> <th> Gain [dB] </th><th>Q</th></tr>
- <tr> <th> HighPass Notch </th> <th> 2 </th><th> 22.8k </th> <th> 0.9 </th><th>4.17</th></tr>
+ <tr style="background:#536CFC"> <th> Type </th> <th> Order </th><th> f<sub>0</sub> [Hz]</th> <th> Gain [dB] </th><th>Q</th><th> Dinamic Range [dB]</th></tr>
+ <tr> <th> HighPass </th> <th> 2 </th><th> 2k </th> <th> 2 </th><th>4.08</th><th>  </th></tr>
  </table>
  </html>
 
@@ -149,10 +149,10 @@
 </font></h1>
  </html>  
  <html>
- <table border=1 align="center"  style="background:#C2D5D3;width:300px"><th colspan="9" style="background:#536CFC">Components</th></tr>
- <tr style="background:#536CFC"> <th colspan="6"> Resistor [&Omega;] </th><th colspan="3"> Capacitor [F] </th></tr>
- <tr><th>R<sub>1</sub></th><th>R<sub>2</sub></th><th>R<sub>3</sub></th><th>R<sub>4</sub></th><th>R<sub>5</sub></th><th>R<sub>6</sub></th><th>C<sub>1</sub></th><th>C<sub>2</sub></th><th>C<sub>3</sub></th></tr>
- <tr><th>8.75k</th><th>17.2k</th><th>1k</th><th>255.68k</th><th>803.28k</th><th>25.07k</th><th>100p</th><th>14.51p</th><th>85.49p</th></tr>
+ <table border=1 align="center"  style="background:#C2D5D3;width:300px"><th colspan="8" style="background:#536CFC">Components</th></tr>
+ <tr style="background:#536CFC"> <th colspan="6"> Resistor [&Omega;] </th><th colspan="2"> Capacitor [F] </th></tr>
+ <tr><th>R<sub>1</sub></th><th>R<sub>2</sub></th><th>R<sub>3</sub></th><th>R<sub>4</sub></th><th>R<sub>5</sub></th><th>R<sub>6</sub></th><th>C<sub>1</sub></th><th>C<sub>2</sub></th></tr>
+ <tr><th>781.55</th><th>191.51</th><th>90.3M</th><th>100k</th><th>781.55</th><th>90.3M</th><th>100n</th><th>100n</th></tr>
  </table>
  </html>
 
@@ -163,16 +163,15 @@
  <table border=1 align="center"  style="background:#C2D5D3;width:500px"><th colspan="5" style="background:#536CFC">Components with commercial values</th></tr>
  <tr style="background:#536CFC"> <th colspan="2">  </th><th > Combination </th><th > Result </th><th > Error </th> </tr>
  <tr style="background:#536CFC"> <th rowspan="7"> Resistor </th></tr>
- <tr><th>R<sub>1</sub></th><th> 560&Omega; + 8.2k&Omega; </th><th> 8.76k&Omega; </th><th> 0.1% </th></tr>
- <tr><th>R<sub>2</sub></th><th> 2.2k&Omega; + 15k&Omega; </th><th> 17.2k&Omega; </th><th> 0.0% </th></tr>
- <tr><th>R<sub>3</sub></th><th> 1k&Omega; </th><th> 1k&Omega; </th><th> 0.0% </th></tr>
- <tr><th>R<sub>4</sub></th><th> 470k&Omega; // 560k&Omega; </th><th> 255.53k&Omega; </th><th> 0.1% </th></tr>
- <tr><th>R<sub>5</sub></th><th> 120k&Omega; + 680k&Omega; </th><th> 800k&Omega; </th><th> 0.4% </th></tr>
- <tr><th>R<sub>6</sub></th><th> 10k&Omega; + 15k&Omega; </th><th> 25k&Omega; </th><th> 0.3% </th></tr>
- <tr style="background:#536CFC"> <th rowspan="4"> Capacitor </th></tr>
- <tr><th>C<sub>1</sub></th><th> 100pF </th><th> 100pF </th><th> 0.0% </tr></tr>
- <tr><th>C<sub>2</sub></th><th> 15pF + 470pF </th><th> 14.54pF </th><th> 0.1% </tr></tr>
- <tr><th>C<sub>3</sub></th><th> 3.3pF // 82pF </th><th> 85.3pF </th><th> 0.2% </tr></tr>
+ <tr><th>R<sub>1</sub></th><th> 100&Omega; + 680&Omega; </th><th> 780&Omega; </th><th> 0.2% </th></tr>
+ <tr><th>R<sub>2</sub></th><th> 220&Omega; // 1.5k&Omega; </th><th> 191.86&Omega; </th><th> 0.2% </th></tr>
+ <tr><th>R<sub>3</sub></th><th> 2.2M&Omega; + 2.2M&Omega; </th><th> 4.4M&Omega; </th><th> 95.1% </th></tr>
+ <tr><th>R<sub>4</sub></th><th> 100k&Omega; </th><th> 100k&Omega; </th><th> 0.0% </th></tr>
+ <tr><th>R<sub>5</sub></th><th> 100&Omega; + 680&Omega; </th><th> 780&Omega; </th><th> 0.2% </th></tr>
+ <tr><th>R<sub>6</sub></th><th> 2.2M&Omega; + 2.2M&Omega; </th><th> 4.4M&Omega; </th><th> 95.1% </th></tr>
+ <tr style="background:#536CFC"> <th rowspan="3"> Capacitor </th></tr>
+ <tr><th>C<sub>1</sub></th><th> 100nF </th><th> 100nF </th><th> 0.0% </tr></tr>
+ <tr><th>C<sub>2</sub></th><th> 100nF </th><th> 100nF </th><th> 0.0% </tr></tr>
  </table>
  </html>
 
@@ -180,34 +179,33 @@
 </font></h1>
  </html>  
  <html>
- <table border=1 align="center"  style="background:#C2D5D3;width:300px" ><th colspan="9" style="background:#536CFC">Sensitivities</th></tr>
- <tr style="background:#536CFC"> <th >  </th>  <th>S<sub>X</sub><sup>G</sup></th> <th>S<sub>X</sub><sup>Q</sup></th><th>S<sub>X</sub><sup>Wp</sup></th> <th>S<sub>X</sub><sup>Wz</sup></th></tr>
- <tr> <th style="background:#536CFC">R<sub>1</sub></th> <th>-0.41</th> <th>0.89</th> <th>0.00</th> <th>-0.34</th></tr>
- <tr> <th style="background:#536CFC">R<sub>2</sub></th> <th>0.04</th> <th>0.46</th> <th>0.00</th> <th>0.86</th></tr>
- <tr> <th style="background:#536CFC">R<sub>3</sub></th> <th>0.38</th> <th>-1.35</th> <th>0.00</th> <th>-0.52</th></tr>
- <tr> <th style="background:#536CFC">R<sub>4</sub></th> <th>0.00</th> <th>-0.64</th> <th>-0.38</th> <th>0.88</th></tr>
- <tr> <th style="background:#536CFC">R<sub>5</sub></th> <th>0.00</th> <th>-0.20</th> <th>-0.12</th> <th>-1.38</th></tr>
- <tr> <th style="background:#536CFC">R<sub>6</sub></th> <th>0.00</th> <th>0.85</th> <th>-0.50</th> <th>-0.50</th></tr>
- <tr> <th style="background:#536CFC">C<sub>1</sub></th> <th>0.00</th> <th>-0.67</th> <th>-0.50</th> <th>-0.50</th></tr>
- <tr> <th style="background:#536CFC">C<sub>2</sub></th> <th>0.18</th> <th>0.58</th> <th>-0.43</th> <th>-0.52</th></tr>
- <tr> <th style="background:#536CFC">C<sub>3</sub></th> <th>-0.18</th> <th>0.10</th> <th>-0.07</th> <th>0.02</th></tr>
+ <table border=1 align="center"  style="background:#C2D5D3;width:300px" ><th colspan="8" style="background:#536CFC">Sensitivities</th></tr>
+ <tr style="background:#536CFC"> <th >  </th>  <th>S<sub>X</sub><sup>G</sup></th> <th>S<sub>X</sub><sup>Q</sup></th><th>S<sub>X</sub><sup>Wp</sup></th></tr>
+ <tr> <th style="background:#536CFC">R<sub>1</sub></th> <th>0.50</th> <th>1.50</th> <th>-0.50</th></tr>
+ <tr> <th style="background:#536CFC">R<sub>2</sub></th> <th>0.00</th> <th>-1.00</th> <th>0.00</th></tr>
+ <tr> <th style="background:#536CFC">R<sub>3</sub></th> <th>-0.50</th> <th>0.00</th> <th>0.00</th></tr>
+ <tr> <th style="background:#536CFC">R<sub>4</sub></th> <th>0.50</th> <th>0.00</th> <th>0.00</th></tr>
+ <tr> <th style="background:#536CFC">R<sub>5</sub></th> <th>0.50</th> <th>-0.50</th> <th>-0.50</th></tr>
+ <tr> <th style="background:#536CFC">R<sub>6</sub></th> <th>-0.50</th> <th>0.00</th> <th>0.00</th></tr>
+ <tr> <th style="background:#536CFC">C<sub>1</sub></th> <th>0.00</th> <th>0.00</th> <th>-0.50</th></tr>
+ <tr> <th style="background:#536CFC">C<sub>2</sub></th> <th>0.00</th> <th>-0.50</th> <th>-0.50</th></tr>
  </table>
  </html>
 
-<html><h1 style="text-align:center;"><font size=5><font color=#A32A2A> Stage N�2: SGM HighpassNotch 
+<html><h1 style="text-align:center;"><font size=5><font color=#A32A2A> Stage N�2: KHN High Pass 
 </font></h1>
  </html>  
  <html>
  <h4>
- <table border=1 align="center" ><th><p><img src="Stages Schematics/Sedra_HPNotch.png" border=1 align="middle"></p></th></table> 
+ <table border=1 align="center" ><th><p><img src="Stages Schematics/KHN_HP.PNG" border=1 align="middle"></p></th></table> 
  </h4>
  </html>
 
  
  <html>
  <table border=1 align="center"  style="background:#C2D5D3;width:300px"><th colspan="8" style="background:#536CFC">Stage Properties</th></tr>
- <tr style="background:#536CFC"> <th> Type </th> <th> Order </th><th> f<sub>0</sub> [Hz]</th> <th> Gain [dB] </th><th>Q</th></tr>
- <tr> <th> HighPass Notch </th> <th> 2 </th><th> 40k </th> <th> 0.9 </th><th>0.81</th></tr>
+ <tr style="background:#536CFC"> <th> Type </th> <th> Order </th><th> f<sub>0</sub> [Hz]</th> <th> Gain [dB] </th><th>Q</th><th> Dinamic Range [dB]</th></tr>
+ <tr> <th> HighPass </th> <th> 2 </th><th> 12.3k </th> <th> 2 </th><th>4.08</th><th>  </th></tr>
  </table>
  </html>
 
@@ -224,10 +222,10 @@
 </font></h1>
  </html>  
  <html>
- <table border=1 align="center"  style="background:#C2D5D3;width:300px"><th colspan="9" style="background:#536CFC">Components</th></tr>
- <tr style="background:#536CFC"> <th colspan="6"> Resistor [&Omega;] </th><th colspan="3"> Capacitor [F] </th></tr>
- <tr><th>R<sub>1</sub></th><th>R<sub>2</sub></th><th>R<sub>3</sub></th><th>R<sub>4</sub></th><th>R<sub>5</sub></th><th>R<sub>6</sub></th><th>C<sub>1</sub></th><th>C<sub>2</sub></th><th>C<sub>3</sub></th></tr>
- <tr><th>221.53</th><th>10.28k</th><th>1k</th><th>21.84k</th><th>1.08M</th><th>74.05k</th><th>100p</th><th>81.44p</th><th>18.56p</th></tr>
+ <table border=1 align="center"  style="background:#C2D5D3;width:300px"><th colspan="8" style="background:#536CFC">Components</th></tr>
+ <tr style="background:#536CFC"> <th colspan="6"> Resistor [&Omega;] </th><th colspan="2"> Capacitor [F] </th></tr>
+ <tr><th>R<sub>1</sub></th><th>R<sub>2</sub></th><th>R<sub>3</sub></th><th>R<sub>4</sub></th><th>R<sub>5</sub></th><th>R<sub>6</sub></th><th>C<sub>1</sub></th><th>C<sub>2</sub></th></tr>
+ <tr><th>129.65</th><th>31.77</th><th>221.7M</th><th>100k</th><th>129.65</th><th>221.7M</th><th>100n</th><th>100n</th></tr>
  </table>
  </html>
 
@@ -238,16 +236,15 @@
  <table border=1 align="center"  style="background:#C2D5D3;width:500px"><th colspan="5" style="background:#536CFC">Components with commercial values</th></tr>
  <tr style="background:#536CFC"> <th colspan="2">  </th><th > Combination </th><th > Result </th><th > Error </th> </tr>
  <tr style="background:#536CFC"> <th rowspan="7"> Resistor </th></tr>
- <tr><th>R<sub>1</sub></th><th> 1.5&Omega; + 220&Omega; </th><th> 221.5&Omega; </th><th> 0.0% </th></tr>
- <tr><th>R<sub>2</sub></th><th> 270&Omega; + 10k&Omega; </th><th> 10.27k&Omega; </th><th> 0.1% </th></tr>
- <tr><th>R<sub>3</sub></th><th> 1k&Omega; </th><th> 1k&Omega; </th><th> 0.0% </th></tr>
- <tr><th>R<sub>4</sub></th><th> 6.8k&Omega; + 15k&Omega; </th><th> 21.8k&Omega; </th><th> 0.2% </th></tr>
- <tr><th>R<sub>5</sub></th><th> 82k&Omega; + 1M&Omega; </th><th> 1.08M&Omega; </th><th> 0.2% </th></tr>
- <tr><th>R<sub>6</sub></th><th> 18k&Omega; + 56k&Omega; </th><th> 74k&Omega; </th><th> 0.1% </th></tr>
- <tr style="background:#536CFC"> <th rowspan="4"> Capacitor </th></tr>
- <tr><th>C<sub>1</sub></th><th> 100pF </th><th> 100pF </th><th> 0.0% </tr></tr>
- <tr><th>C<sub>2</sub></th><th> 82pF + 12nF </th><th> 81.44pF </th><th> <0,1% </tr></tr>
- <tr><th>C<sub>3</sub></th><th> 22pF + 120pF </th><th> 18.59pF </th><th> 0.2% </tr></tr>
+ <tr><th>R<sub>1</sub></th><th> 10&Omega; + 120&Omega; </th><th> 130&Omega; </th><th> 0.3% </th></tr>
+ <tr><th>R<sub>2</sub></th><th> 33&Omega; // 820&Omega; </th><th> 31.72&Omega; </th><th> 0.1% </th></tr>
+ <tr><th>R<sub>3</sub></th><th> 2.2M&Omega; + 2.2M&Omega; </th><th> 4.4M&Omega; </th><th> 98.0% </th></tr>
+ <tr><th>R<sub>4</sub></th><th> 100k&Omega; </th><th> 100k&Omega; </th><th> 0.0% </th></tr>
+ <tr><th>R<sub>5</sub></th><th> 10&Omega; + 120&Omega; </th><th> 130&Omega; </th><th> 0.3% </th></tr>
+ <tr><th>R<sub>6</sub></th><th> 2.2M&Omega; + 2.2M&Omega; </th><th> 4.4M&Omega; </th><th> 98.0% </th></tr>
+ <tr style="background:#536CFC"> <th rowspan="3"> Capacitor </th></tr>
+ <tr><th>C<sub>1</sub></th><th> 100nF </th><th> 100nF </th><th> 0.0% </tr></tr>
+ <tr><th>C<sub>2</sub></th><th> 100nF </th><th> 100nF </th><th> 0.0% </tr></tr>
  </table>
  </html>
 
@@ -255,17 +252,154 @@
 </font></h1>
  </html>  
  <html>
- <table border=1 align="center"  style="background:#C2D5D3;width:300px" ><th colspan="9" style="background:#536CFC">Sensitivities</th></tr>
- <tr style="background:#536CFC"> <th >  </th>  <th>S<sub>X</sub><sup>G</sup></th> <th>S<sub>X</sub><sup>Q</sup></th><th>S<sub>X</sub><sup>Wp</sup></th> <th>S<sub>X</sub><sup>Wz</sup></th></tr>
- <tr> <th style="background:#536CFC">R<sub>1</sub></th> <th>-0.52</th> <th>-0.17</th> <th>0.00</th> <th>-0.26</th></tr>
- <tr> <th style="background:#536CFC">R<sub>2</sub></th> <th>0.05</th> <th>-0.00</th> <th>0.00</th> <th>0.53</th></tr>
- <tr> <th style="background:#536CFC">R<sub>3</sub></th> <th>0.47</th> <th>0.17</th> <th>0.00</th> <th>-0.27</th></tr>
- <tr> <th style="background:#536CFC">R<sub>4</sub></th> <th>0.00</th> <th>0.66</th> <th>-0.49</th> <th>0.56</th></tr>
- <tr> <th style="background:#536CFC">R<sub>5</sub></th> <th>0.00</th> <th>0.01</th> <th>-0.01</th> <th>-1.06</th></tr>
- <tr> <th style="background:#536CFC">R<sub>6</sub></th> <th>0.00</th> <th>-0.67</th> <th>-0.50</th> <th>-0.50</th></tr>
- <tr> <th style="background:#536CFC">C<sub>1</sub></th> <th>0.00</th> <th>0.08</th> <th>-0.50</th> <th>-0.50</th></tr>
- <tr> <th style="background:#536CFC">C<sub>2</sub></th> <th>0.86</th> <th>-0.02</th> <th>-0.09</th> <th>-0.52</th></tr>
- <tr> <th style="background:#536CFC">C<sub>3</sub></th> <th>-0.86</th> <th>-0.07</th> <th>-0.41</th> <th>0.02</th></tr>
+ <table border=1 align="center"  style="background:#C2D5D3;width:300px" ><th colspan="8" style="background:#536CFC">Sensitivities</th></tr>
+ <tr style="background:#536CFC"> <th >  </th>  <th>S<sub>X</sub><sup>G</sup></th> <th>S<sub>X</sub><sup>Q</sup></th><th>S<sub>X</sub><sup>Wp</sup></th></tr>
+ <tr> <th style="background:#536CFC">R<sub>1</sub></th> <th>0.50</th> <th>1.50</th> <th>-0.50</th></tr>
+ <tr> <th style="background:#536CFC">R<sub>2</sub></th> <th>0.00</th> <th>-1.00</th> <th>0.00</th></tr>
+ <tr> <th style="background:#536CFC">R<sub>3</sub></th> <th>-0.50</th> <th>0.00</th> <th>0.00</th></tr>
+ <tr> <th style="background:#536CFC">R<sub>4</sub></th> <th>0.50</th> <th>0.00</th> <th>0.00</th></tr>
+ <tr> <th style="background:#536CFC">R<sub>5</sub></th> <th>0.50</th> <th>-0.50</th> <th>-0.50</th></tr>
+ <tr> <th style="background:#536CFC">R<sub>6</sub></th> <th>-0.50</th> <th>0.00</th> <th>0.00</th></tr>
+ <tr> <th style="background:#536CFC">C<sub>1</sub></th> <th>0.00</th> <th>0.00</th> <th>-0.50</th></tr>
+ <tr> <th style="background:#536CFC">C<sub>2</sub></th> <th>0.00</th> <th>-0.50</th> <th>-0.50</th></tr>
+ </table>
+ </html>
+
+<html><h1 style="text-align:center;"><font size=5><font color=#A32A2A> Stage N�3: SK Low Pass 
+</font></h1>
+ </html>  
+ <html>
+ <h4>
+ <table border=1 align="center" ><th><p><img src="Stages Schematics/SK_LP_G.PNG" border=1 align="middle"></p></th></table> 
+ </h4>
+ </html>
+
+ 
+ <html>
+ <table border=1 align="center"  style="background:#C2D5D3;width:300px"><th colspan="8" style="background:#536CFC">Stage Properties</th></tr>
+ <tr style="background:#536CFC"> <th> Type </th> <th> Order </th><th> f<sub>0</sub> [Hz]</th> <th> Gain [dB] </th><th>Q</th><th> Dinamic Range [dB]</th></tr>
+ <tr> <th> LowPass </th> <th> 2 </th><th> 3.2k </th> <th> 2 </th><th>1.30</th><th>  </th></tr>
+ </table>
+ </html>
+
+ 
+<html><h1 style="text-align:left;"><font size=4><font color=#A32A2A>  Stage Attenuation: 
+</font></h1>
+ </html> <html>
+ <table border=1 align="center" ><th>
+ <p><img src="Stage3_Att.png" border=1 align="middle"></p> 
+ </th></table>
+ </html>
+
+<html><h1 style="text-align:left;"><font size=4><font color=#A32A2A>  Calculated components for the specified filter: 
+</font></h1>
+ </html>  
+ <html>
+ <table border=1 align="center"  style="background:#C2D5D3;width:300px"><th colspan="6" style="background:#536CFC">Components</th></tr>
+ <tr style="background:#536CFC"> <th colspan="4"> Resistor [&Omega;] </th><th colspan="2"> Capacitor [F] </th></tr>
+ <tr><th>R<sub>1</sub></th><th>R<sub>2</sub></th><th>R<sub>3</sub></th><th>R<sub>4</sub></th><th>C<sub>1</sub></th><th>C<sub>2</sub></th></tr>
+ <tr><th>100k</th><th>100k</th><th>1k</th><th>569.32</th><th>651.56p</th><th>376.16p</th></tr>
+ </table>
+ </html>
+
+<html><h1 style="text-align:left;"><font size=4><font color=#A32A2A>  Approximation of the components with commercial values: 
+</font></h1>
+ </html>  
+ <html>
+ <table border=1 align="center"  style="background:#C2D5D3;width:500px"><th colspan="5" style="background:#536CFC">Components with commercial values</th></tr>
+ <tr style="background:#536CFC"> <th colspan="2">  </th><th > Combination </th><th > Result </th><th > Error </th> </tr>
+ <tr style="background:#536CFC"> <th rowspan="5"> Resistor </th></tr>
+ <tr><th>R<sub>1</sub></th><th> 100k&Omega; </th><th> 100k&Omega; </th><th> 0.0% </th></tr>
+ <tr><th>R<sub>2</sub></th><th> 100k&Omega; </th><th> 100k&Omega; </th><th> 0.0% </th></tr>
+ <tr><th>R<sub>3</sub></th><th> 1k&Omega; </th><th> 1k&Omega; </th><th> 0.0% </th></tr>
+ <tr><th>R<sub>4</sub></th><th> 10&Omega; + 560&Omega; </th><th> 570&Omega; </th><th> 0.1% </th></tr>
+ <tr style="background:#536CFC"> <th rowspan="3"> Capacitor </th></tr>
+ <tr><th>C<sub>1</sub></th><th> 680pF + 15nF </th><th> 650.51pF </th><th> 0.2% </tr></tr>
+ <tr><th>C<sub>2</sub></th><th> 390pF + 10nF </th><th> 375.36pF </th><th> 0.2% </tr></tr>
+ </table>
+ </html>
+
+<html><h1 style="text-align:left;"><font size=4><font color=#A32A2A>  Sensitivity of each component: 
+</font></h1>
+ </html>  
+ <html>
+ <table border=1 align="center"  style="background:#C2D5D3;width:300px" ><th colspan="6" style="background:#536CFC">Sensitivities</th></tr>
+ <tr style="background:#536CFC"> <th >  </th>  <th>S<sub>X</sub><sup>G</sup></th> <th>S<sub>X</sub><sup>Q</sup></th><th>S<sub>X</sub><sup>Wp</sup></th></tr>
+ <tr> <th style="background:#536CFC">R<sub>1</sub></th> <th>0.00</th> <th>0.49</th> <th>-0.50</th></tr>
+ <tr> <th style="background:#536CFC">R<sub>2</sub></th> <th>0.00</th> <th>-0.49</th> <th>-0.50</th></tr>
+ <tr> <th style="background:#536CFC">R<sub>3</sub></th> <th>-0.36</th> <th>-0.97</th> <th>0.00</th></tr>
+ <tr> <th style="background:#536CFC">R<sub>4</sub></th> <th>0.36</th> <th>0.97</th> <th>0.00</th></tr>
+ <tr> <th style="background:#536CFC">C<sub>1</sub></th> <th>0.00</th> <th>1.47</th> <th>-0.50</th></tr>
+ <tr> <th style="background:#536CFC">C<sub>2</sub></th> <th>0.00</th> <th>-1.47</th> <th>-0.50</th></tr>
+ </table>
+ </html>
+
+<html><h1 style="text-align:center;"><font size=5><font color=#A32A2A> Stage N�4: SK Low Pass 
+</font></h1>
+ </html>  
+ <html>
+ <h4>
+ <table border=1 align="center" ><th><p><img src="Stages Schematics/SK_LP_G.PNG" border=1 align="middle"></p></th></table> 
+ </h4>
+ </html>
+
+ 
+ <html>
+ <table border=1 align="center"  style="background:#C2D5D3;width:300px"><th colspan="8" style="background:#536CFC">Stage Properties</th></tr>
+ <tr style="background:#536CFC"> <th> Type </th> <th> Order </th><th> f<sub>0</sub> [Hz]</th> <th> Gain [dB] </th><th>Q</th><th> Dinamic Range [dB]</th></tr>
+ <tr> <th> LowPass </th> <th> 2 </th><th> 7.8k </th> <th> 2 </th><th>1.30</th><th> 54.3 </th></tr>
+ </table>
+ </html>
+
+ 
+<html><h1 style="text-align:left;"><font size=4><font color=#A32A2A>  Stage Attenuation: 
+</font></h1>
+ </html> <html>
+ <table border=1 align="center" ><th>
+ <p><img src="Stage4_Att.png" border=1 align="middle"></p> 
+ </th></table>
+ </html>
+
+<html><h1 style="text-align:left;"><font size=4><font color=#A32A2A>  Calculated components for the specified filter: 
+</font></h1>
+ </html>  
+ <html>
+ <table border=1 align="center"  style="background:#C2D5D3;width:300px"><th colspan="6" style="background:#536CFC">Components</th></tr>
+ <tr style="background:#536CFC"> <th colspan="4"> Resistor [&Omega;] </th><th colspan="2"> Capacitor [F] </th></tr>
+ <tr><th>R<sub>1</sub></th><th>R<sub>2</sub></th><th>R<sub>3</sub></th><th>R<sub>4</sub></th><th>C<sub>1</sub></th><th>C<sub>2</sub></th></tr>
+ <tr><th>100k</th><th>100k</th><th>1k</th><th>569.32</th><th>269.37p</th><th>155.51p</th></tr>
+ </table>
+ </html>
+
+<html><h1 style="text-align:left;"><font size=4><font color=#A32A2A>  Approximation of the components with commercial values: 
+</font></h1>
+ </html>  
+ <html>
+ <table border=1 align="center"  style="background:#C2D5D3;width:500px"><th colspan="5" style="background:#536CFC">Components with commercial values</th></tr>
+ <tr style="background:#536CFC"> <th colspan="2">  </th><th > Combination </th><th > Result </th><th > Error </th> </tr>
+ <tr style="background:#536CFC"> <th rowspan="5"> Resistor </th></tr>
+ <tr><th>R<sub>1</sub></th><th> 100k&Omega; </th><th> 100k&Omega; </th><th> 0.0% </th></tr>
+ <tr><th>R<sub>2</sub></th><th> 100k&Omega; </th><th> 100k&Omega; </th><th> 0.0% </th></tr>
+ <tr><th>R<sub>3</sub></th><th> 1k&Omega; </th><th> 1k&Omega; </th><th> 0.0% </th></tr>
+ <tr><th>R<sub>4</sub></th><th> 10&Omega; + 560&Omega; </th><th> 570&Omega; </th><th> 0.1% </th></tr>
+ <tr style="background:#536CFC"> <th rowspan="3"> Capacitor </th></tr>
+ <tr><th>C<sub>1</sub></th><th> 270pF + 120nF </th><th> 269.39pF </th><th> <0,1% </tr></tr>
+ <tr><th>C<sub>2</sub></th><th> 5.6pF // 150pF </th><th> 155.6pF </th><th> <0,1% </tr></tr>
+ </table>
+ </html>
+
+<html><h1 style="text-align:left;"><font size=4><font color=#A32A2A>  Sensitivity of each component: 
+</font></h1>
+ </html>  
+ <html>
+ <table border=1 align="center"  style="background:#C2D5D3;width:300px" ><th colspan="6" style="background:#536CFC">Sensitivities</th></tr>
+ <tr style="background:#536CFC"> <th >  </th>  <th>S<sub>X</sub><sup>G</sup></th> <th>S<sub>X</sub><sup>Q</sup></th><th>S<sub>X</sub><sup>Wp</sup></th></tr>
+ <tr> <th style="background:#536CFC">R<sub>1</sub></th> <th>0.00</th> <th>0.49</th> <th>-0.50</th></tr>
+ <tr> <th style="background:#536CFC">R<sub>2</sub></th> <th>0.00</th> <th>-0.49</th> <th>-0.50</th></tr>
+ <tr> <th style="background:#536CFC">R<sub>3</sub></th> <th>-0.36</th> <th>-0.97</th> <th>0.00</th></tr>
+ <tr> <th style="background:#536CFC">R<sub>4</sub></th> <th>0.36</th> <th>0.97</th> <th>0.00</th></tr>
+ <tr> <th style="background:#536CFC">C<sub>1</sub></th> <th>0.00</th> <th>1.47</th> <th>-0.50</th></tr>
+ <tr> <th style="background:#536CFC">C<sub>2</sub></th> <th>0.00</th> <th>-1.47</th> <th>-0.50</th></tr>
  </table>
  </html>
 
