@@ -1,0 +1,14 @@
+Change Component Designator: OldDesignator= NewDesignator=Rp
+Change Component Designator: OldDesignator=CD NewDesignator=CD5
+Change Component Designator: OldDesignator=CD NewDesignator=CD6
+Change Component Designator: OldDesignator=INP NewDesignator=TP6
+Change Component Designator: OldDesignator=OUT NewDesignator=OUTPUT
+Change Component Designator: OldDesignator=TP1 NewDesignator=INE
+Change Component Designator: OldDesignator=TP2 NewDesignator=OUTE
+Change Component Designator: OldDesignator=TP3 NewDesignator=VCC2
+Change Component Designator: OldDesignator=TP4 NewDesignator=GND2
+Change Component Designator: OldDesignator=TP5 NewDesignator=VEE2
+Change Component Designator: OldDesignator=TP8 NewDesignator=OUTE2
+Added Member To Class: ClassName=Esquemático Member=Component CD6 CAP
+Added Member To Class: ClassName=Esquemático Member=Component TP6 TP
+Added Room: Name=Esquemático

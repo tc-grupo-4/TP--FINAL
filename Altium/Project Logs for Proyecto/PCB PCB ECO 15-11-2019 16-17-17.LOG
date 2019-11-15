@@ -1,0 +1,8 @@
+Added Pin To Net: NetName=OUT PCB Pin=Rp-1
+Added Pin To Net: NetName=OUT PCB Pin=Rp-2
+Added Pin To Net: NetName=NetR9_2 Pin=Rp-3
+Added Member To Class: ClassName=Esquemático Member=Component CD4 CAP
+Added Member To Class: ClassName=Esquemático Member=Component Rp PRESET
+Added Member To Class: ClassName=Esquemático Member=Component U1 TL082
+Added Member To Class: ClassName=Esquemático Member=Component U2 TL082
+Added Room: Name=Esquemático

@@ -1,0 +1,24 @@
+Removed Pin From Net: NetName=VEE Pin=CD5-1
+Removed Pin From Net: NetName=GND Pin=CD5-2
+Removed Pin From Net: NetName=VCC Pin=CD6-1
+Removed Pin From Net: NetName=GND Pin=CD6-2
+Removed Pin From Net: NetName=VEE Pin=J1-1
+Removed Pin From Net: NetName=GND Pin=J1-4
+Removed Pin From Net: NetName=VCC Pin=J1-7
+Removed Pin From Net: NetName=GND Pin=J2-1
+Removed Pin From Net: NetName=GND Pin=J3-1
+Removed Pin From Net: NetName=VEE Pin=U3-4
+Removed Pin From Net: NetName=GND Pin=U3-5
+Removed Pin From Net: NetName=VCC Pin=U3-8
+Removed Member From Class: ClassName=Esquemático Member=CD5
+Removed Member From Class: ClassName=Esquemático Member=CD6
+Removed Member From Class: ClassName=Esquemático Member=J1
+Removed Member From Class: ClassName=Esquemático Member=J2
+Removed Member From Class: ClassName=Esquemático Member=J3
+Removed Member From Class: ClassName=Esquemático Member=R3
+Removed Member From Class: ClassName=Esquemático Member=R5
+Removed Member From Class: ClassName=Esquemático Member=TP3
+Removed Member From Class: ClassName=Esquemático Member=TP4
+Removed Member From Class: ClassName=Esquemático Member=TP5
+Removed Member From Class: ClassName=Esquemático Member=U3
+Added Room: Name=Esquemático

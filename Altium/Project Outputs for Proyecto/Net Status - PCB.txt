@@ -1,0 +1,19 @@
+Net Status Report
+Filename     : C:\Users\Ian Diaz\Desktop\ITBA\TC\TP--FINAL\Altium\PCB.PcbDoc
+Date         : 15/11/2019
+Time         : 12:59:38
+Time Elapsed : 00:00:00
+
+Nets, Layer, Length
+    GND, Signal Layers Only, 82.1307mm
+    NetC1_1, Signal Layers Only, 8.9824mm
+    NetC1_2, Signal Layers Only, 7.0429mm
+    NetC2_1, Signal Layers Only, 37.2555mm
+    NetC2_2, Signal Layers Only, 11.3832mm
+    NetR4_1, Signal Layers Only, 7.8983mm
+    OUT ETAPA, Signal Layers Only, 17.2172mm
+    VCC, Signal Layers Only, 51.0316mm
+    VEE, Signal Layers Only, 15.9509mm
+    in, Signal Layers Only, 41.8848mm
+    out, Signal Layers Only, 33.2932mm
+count : 11

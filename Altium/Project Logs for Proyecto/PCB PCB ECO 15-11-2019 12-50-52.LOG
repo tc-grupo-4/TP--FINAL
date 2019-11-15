@@ -1,0 +1,13 @@
+Added Component: Designator=TP3(TPTH)
+Add component. Clean all parameters for all variants
+Added Component: Designator=TP4(TPTH)
+Add component. Clean all parameters for all variants
+Added Component: Designator=TP5(TPTH)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=VCC Pin=TP3-1
+Added Pin To Net: NetName=GND Pin=TP4-1
+Added Pin To Net: NetName=VEE Pin=TP5-1
+Added Member To Class: ClassName=Esquemático Member=Component TP3 TP
+Added Member To Class: ClassName=Esquemático Member=Component TP4 TP
+Added Member To Class: ClassName=Esquemático Member=Component TP5 TP
+Added Room: Name=Esquemático

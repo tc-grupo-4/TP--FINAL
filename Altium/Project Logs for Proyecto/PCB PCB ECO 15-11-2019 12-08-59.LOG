@@ -1,0 +1,160 @@
+Added Component: Designator=C1(CAP200)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C2(CAP200)
+Add component. Clean all parameters for all variants
+Added Component: Designator=CD1(CAP200)
+Add component. Clean all parameters for all variants
+Added Component: Designator=CD2(CAP200)
+Add component. Clean all parameters for all variants
+Added Component: Designator=CD3(CAP200)
+Add component. Clean all parameters for all variants
+Added Component: Designator=CD4(CAP200)
+Add component. Clean all parameters for all variants
+Added Component: Designator=CD5(CAP200)
+Add component. Clean all parameters for all variants
+Added Component: Designator=CD6(CAP200)
+Add component. Clean all parameters for all variants
+Added Component: Designator=J1(SIP7)
+Add component. Clean all parameters for all variants
+Added Component: Designator=J2(SIP4)
+Add component. Clean all parameters for all variants
+Added Component: Designator=J3(SIP4)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R1(0805)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R2(0805)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R3(PRESET V)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R4(0805)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R5(0805)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R7(0805)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R8(0805)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R9(0805)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R13(0805)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R14(0805)
+Add component. Clean all parameters for all variants
+Added Component: Designator=TP1(TPTH)
+Add component. Clean all parameters for all variants
+Added Component: Designator=TP2(TPTH)
+Add component. Clean all parameters for all variants
+Added Component: Designator=TP3(TPTH)
+Add component. Clean all parameters for all variants
+Added Component: Designator=TP4(TPTH)
+Add component. Clean all parameters for all variants
+Added Component: Designator=TP5(TPTH)
+Add component. Clean all parameters for all variants
+Added Component: Designator=U1(DIP8)
+Add component. Clean all parameters for all variants
+Added Component: Designator=U2(DIP8)
+Add component. Clean all parameters for all variants
+Added Component: Designator=U3(DIP8)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=NetC1_1 Pin=C1-1
+Added Pin To Net: NetName=NetC1_2 Pin=C1-2
+Added Pin To Net: NetName=NetC2_1 Pin=C2-1
+Added Pin To Net: NetName=NetC2_2 Pin=C2-2
+Added Pin To Net: NetName=VEE Pin=CD1-1
+Added Pin To Net: NetName=GND Pin=CD1-2
+Added Pin To Net: NetName=GND Pin=CD2-2
+Added Pin To Net: NetName=VEE Pin=CD3-1
+Added Pin To Net: NetName=GND Pin=CD3-2
+Added Pin To Net: NetName=VCC Pin=CD4-1
+Added Pin To Net: NetName=GND Pin=CD4-2
+Added Pin To Net: NetName=VEE Pin=CD5-1
+Added Pin To Net: NetName=GND Pin=CD5-2
+Added Pin To Net: NetName=VCC Pin=CD6-1
+Added Pin To Net: NetName=GND Pin=CD6-2
+Added Pin To Net: NetName=VEE Pin=J1-1
+Added Pin To Net: NetName=GND Pin=J1-4
+Added Pin To Net: NetName=VCC Pin=J1-7
+Added Pin To Net: NetName=GND Pin=J2-1
+Added Pin To Net: NetName=IN PLACA Pin=J2-4
+Added Pin To Net: NetName=GND Pin=J3-1
+Added Pin To Net: NetName=OUT PCB Pin=J3-4
+Added Pin To Net: NetName=NetC2_1 Pin=R1-1
+Added Pin To Net: NetName=NetC1_2 Pin=R1-2
+Added Pin To Net: NetName=NetC2_1 Pin=R2-1
+Added Pin To Net: NetName=NetC2_2 Pin=R2-2
+Added Pin To Net: NetName=OUT PCB Pin=R3-1
+Added Pin To Net: NetName=OUT PCB Pin=R3-2
+Added Pin To Net: NetName=NetR3_3 Pin=R3-3
+Added Pin To Net: NetName=NetR4_1 Pin=R4-1
+Added Pin To Net: NetName=out Pin=R4-2
+Added Pin To Net: NetName=OUT ULTIMA ETAPA Pin=R5-1
+Added Pin To Net: NetName=NetR3_3 Pin=R5-2
+Added Pin To Net: NetName=in Pin=R7-1
+Added Pin To Net: NetName=NetC2_1 Pin=R7-2
+Added Pin To Net: NetName=NetC2_2 Pin=R8-1
+Added Pin To Net: NetName=NetR4_1 Pin=R8-2
+Added Pin To Net: NetName=out Pin=R9-1
+Added Pin To Net: NetName=NetC1_1 Pin=R9-2
+Added Pin To Net: NetName=in Pin=R13-1
+Added Pin To Net: NetName=NetR4_1 Pin=R13-2
+Added Pin To Net: NetName=in Pin=R14-1
+Added Pin To Net: NetName=NetC1_1 Pin=R14-2
+Added Pin To Net: NetName=in Pin=TP1-1
+Added Pin To Net: NetName=OUT ETAPA Pin=TP2-1
+Added Pin To Net: NetName=OUT ULTIMA ETAPA Pin=TP3-1
+Added Pin To Net: NetName=1ERA CELDA Pin=TP4-1
+Added Pin To Net: NetName=OUT PCB Pin=TP5-1
+Added Pin To Net: NetName=NetC2_2 Pin=U1-1
+Added Pin To Net: NetName=NetC2_1 Pin=U1-2
+Added Pin To Net: NetName=GND Pin=U1-3
+Added Pin To Net: NetName=VEE Pin=U1-4
+Added Pin To Net: NetName=GND Pin=U1-5
+Added Pin To Net: NetName=NetR4_1 Pin=U1-6
+Added Pin To Net: NetName=out Pin=U1-7
+Added Pin To Net: NetName=VCC Pin=U1-8
+Added Pin To Net: NetName=NetC1_2 Pin=U2-1
+Added Pin To Net: NetName=NetC1_1 Pin=U2-2
+Added Pin To Net: NetName=GND Pin=U2-3
+Added Pin To Net: NetName=VEE Pin=U2-4
+Added Pin To Net: NetName=out Pin=U2-5
+Added Pin To Net: NetName=OUT ETAPA Pin=U2-6
+Added Pin To Net: NetName=OUT ETAPA Pin=U2-7
+Added Pin To Net: NetName=VCC Pin=U2-8
+Added Pin To Net: NetName=1ERA CELDA Pin=U3-1
+Added Pin To Net: NetName=1ERA CELDA Pin=U3-2
+Added Pin To Net: NetName=IN PLACA Pin=U3-3
+Added Pin To Net: NetName=VEE Pin=U3-4
+Added Pin To Net: NetName=GND Pin=U3-5
+Added Pin To Net: NetName=NetR3_3 Pin=U3-6
+Added Pin To Net: NetName=OUT PCB Pin=U3-7
+Added Pin To Net: NetName=VCC Pin=U3-8
+Added Member To Class: ClassName=Esquemático Member=Component C1 10n
+Added Member To Class: ClassName=Esquemático Member=Component C2 10n
+Added Member To Class: ClassName=Esquemático Member=Component CD1 CAP
+Added Member To Class: ClassName=Esquemático Member=Component CD2 CAP
+Added Member To Class: ClassName=Esquemático Member=Component CD3 CAP
+Added Member To Class: ClassName=Esquemático Member=Component CD4 CAP
+Added Member To Class: ClassName=Esquemático Member=Component CD5 CAP
+Added Member To Class: ClassName=Esquemático Member=Component CD6 CAP
+Added Member To Class: ClassName=Esquemático Member=Component J1 CON7
+Added Member To Class: ClassName=Esquemático Member=Component J2 CON4
+Added Member To Class: ClassName=Esquemático Member=Component J3 CON4
+Added Member To Class: ClassName=Esquemático Member=Component R1 1k
+Added Member To Class: ClassName=Esquemático Member=Component R2 5k6
+Added Member To Class: ClassName=Esquemático Member=Component R3 PRESET
+Added Member To Class: ClassName=Esquemático Member=Component R4 1k
+Added Member To Class: ClassName=Esquemático Member=Component R5 RES
+Added Member To Class: ClassName=Esquemático Member=Component R7 10k
+Added Member To Class: ClassName=Esquemático Member=Component R8 1k
+Added Member To Class: ClassName=Esquemático Member=Component R9 1k5
+Added Member To Class: ClassName=Esquemático Member=Component R13 1k8
+Added Member To Class: ClassName=Esquemático Member=Component R14 inf
+Added Member To Class: ClassName=Esquemático Member=Component TP1 TP
+Added Member To Class: ClassName=Esquemático Member=Component TP2 TP
+Added Member To Class: ClassName=Esquemático Member=Component TP3 TP
+Added Member To Class: ClassName=Esquemático Member=Component TP4 TP
+Added Member To Class: ClassName=Esquemático Member=Component TP5 TP
+Added Member To Class: ClassName=Esquemático Member=Component U1 TL082
+Added Member To Class: ClassName=Esquemático Member=Component U2 TL082
+Added Member To Class: ClassName=Esquemático Member=Component U3 LM833
+Added Room: Name=Esquemático

@@ -1,0 +1,9 @@
+Removed Pin From Net: NetName=OUT E Pin=OUTE2-1
+Removed Pin From Net: NetName=OUT PCB Pin=OUTPUT-1
+Removed Pin From Net: NetName=TO E Pin=TOE-1
+Removed Pin From Net: NetName=INPUT Pin=TP6-1
+Removed Member From Class: ClassName=Esquemático Member=OUTE2
+Removed Member From Class: ClassName=Esquemático Member=OUTPUT
+Removed Member From Class: ClassName=Esquemático Member=TOE
+Removed Member From Class: ClassName=Esquemático Member=TP6
+Added Room: Name=Esquemático

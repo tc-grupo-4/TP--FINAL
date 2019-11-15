@@ -1,0 +1,55 @@
+Removed Pin From Net: NetName=OUT PCB Pin=R9-2
+Removed Member From Class: ClassName=Esquemático Member=C1_5
+Removed Member From Class: ClassName=Esquemático Member=C2_5
+Removed Member From Class: ClassName=Esquemático Member=R1_5
+Removed Member From Class: ClassName=Esquemático Member=R2_5
+Removed Member From Class: ClassName=Esquemático Member=R4_5
+Removed Member From Class: ClassName=Esquemático Member=R5_5
+Removed Member From Class: ClassName=Esquemático Member=R7_5
+Change Component Designator: OldDesignator=C1_1 NewDesignator=C1
+Change Component Designator: OldDesignator=C2_1 NewDesignator=C2
+Change Component Designator: OldDesignator=CD NewDesignator=CD2
+Change Component Designator: OldDesignator=CD NewDesignator=CD3
+Change Component Designator: OldDesignator=CD NewDesignator=CD5
+Change Component Designator: OldDesignator=CD NewDesignator=CD6
+Change Component Designator: OldDesignator=GND NewDesignator=TP4
+Change Component Designator: OldDesignator=GND NewDesignator=TP11
+Change Component Designator: OldDesignator=IN1 NewDesignator=TP1
+Change Component Designator: OldDesignator=IN NewDesignator=TP6
+Change Component Designator: OldDesignator=O1 NewDesignator=TP2
+Change Component Designator: OldDesignator=OUTE NewDesignator=TP8
+Change Component Designator: OldDesignator=OUTPUT NewDesignator=TP7
+Change Component Designator: OldDesignator=R1_1 NewDesignator=R1
+Change Component Designator: OldDesignator=R2_1 NewDesignator=R2
+Change Component Designator: OldDesignator=R3_! NewDesignator=R3
+Change Component Designator: OldDesignator=R4_1 NewDesignator=R4
+Change Component Designator: OldDesignator=R5_1 NewDesignator=R5
+Change Component Designator: OldDesignator=R7_1 NewDesignator=R7
+Change Component Designator: OldDesignator=TOE NewDesignator=TP9
+Change Component Designator: OldDesignator=VCC NewDesignator=TP3
+Change Component Designator: OldDesignator=VCC NewDesignator=TP10
+Change Component Designator: OldDesignator=VEE NewDesignator=TP5
+Change Component Designator: OldDesignator=VEE NewDesignator=TP12
+Added Component: Designator=Rp(PRESET V)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=OUT PCB Pin=Rp-1
+Added Pin To Net: NetName=OUT PCB Pin=Rp-2
+Added Pin To Net: NetName=NetR9_2 Pin=R9-2
+Added Pin To Net: NetName=NetR9_2 Pin=Rp-3
+Added Net: Name=NetR9_2
+Added Member To Class: ClassName=Esquemático Member=Component C1 10n
+Added Member To Class: ClassName=Esquemático Member=Component C2 10n
+Added Member To Class: ClassName=Esquemático Member=Component CD1 CAP
+Added Member To Class: ClassName=Esquemático Member=Component CD3 CAP
+Added Member To Class: ClassName=Esquemático Member=Component CD5 CAP
+Added Member To Class: ClassName=Esquemático Member=Component CD6 CAP
+Added Member To Class: ClassName=Esquemático Member=Component R1 5k6
+Added Member To Class: ClassName=Esquemático Member=Component R2 1k5
+Added Member To Class: ClassName=Esquemático Member=Component R4 10k
+Added Member To Class: ClassName=Esquemático Member=Component R5 inf
+Added Member To Class: ClassName=Esquemático Member=Component R7 1k
+Added Member To Class: ClassName=Esquemático Member=Component Rp PRESET
+Added Member To Class: ClassName=Esquemático Member=Component TP10 TP
+Added Member To Class: ClassName=Esquemático Member=Component TP11 TP
+Added Member To Class: ClassName=Esquemático Member=Component TP12 TP
+Added Room: Name=Esquemático
