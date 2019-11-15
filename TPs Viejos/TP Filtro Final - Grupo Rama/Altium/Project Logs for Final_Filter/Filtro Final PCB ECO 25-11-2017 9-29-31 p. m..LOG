@@ -1,0 +1,10 @@
+Added Component: Designator=GND1(TPTH)
+Added Component: Designator=GND2(TPTH)
+Added Component: Designator=GND(TPTH)
+Added Pin To Net: NetName=GND Pin=GND1-1
+Added Pin To Net: NetName=GND Pin=GND2-1
+Added Pin To Net: NetName=GND Pin=GND-1
+Added Member To Class: ClassName=Esquemático entero Member=Component GND1 TP
+Added Member To Class: ClassName=Esquemático entero Member=Component GND2 TP
+Added Member To Class: ClassName=Esquemático entero Member=Component GND TP
+Added Room: Name=Esquemático entero

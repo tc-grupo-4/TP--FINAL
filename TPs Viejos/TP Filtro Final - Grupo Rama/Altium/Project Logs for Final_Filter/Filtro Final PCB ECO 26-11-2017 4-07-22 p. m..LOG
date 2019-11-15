@@ -1,0 +1,7 @@
+Removed Pin From Net: NetName=GND Pin=Cout-2
+Removed Pin From Net: NetName=NetJLPF_2 Pin=JLPF-2
+Removed Member From Class: ClassName=Esquemático entero Member=JLPF
+Removed Member From Class: ClassName=Esquemático entero Member=JRLC
+Removed Member From Class: ClassName=Esquemático entero Member=VoutRC
+Added Pin To Net: NetName=NetJLPF_2 Pin=JGAIN-2
+Change Net Name : Old Net Name=NetJLPF_2 New Net Name=NetJGAIN_2

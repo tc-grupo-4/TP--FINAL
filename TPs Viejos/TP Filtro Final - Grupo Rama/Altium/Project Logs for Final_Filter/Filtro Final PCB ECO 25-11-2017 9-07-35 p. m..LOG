@@ -1,0 +1,7 @@
+Removed Pin From Net: NetName=NetJGAIN_3 Pin=U2-1
+Removed Pin From Net: NetName=NetRg1_2 Pin=U2-2
+Removed Pin From Net: NetName=GND Pin=U2-3
+Added Pin To Net: NetName=GND Pin=U2-5
+Added Pin To Net: NetName=NetRg1_2 Pin=U2-6
+Added Pin To Net: NetName=NetJGAIN_3 Pin=U2-7
+Added Room: Name=Esquemático entero

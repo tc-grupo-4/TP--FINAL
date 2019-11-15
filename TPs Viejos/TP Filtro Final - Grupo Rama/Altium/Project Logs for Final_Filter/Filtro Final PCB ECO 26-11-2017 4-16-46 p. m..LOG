@@ -1,0 +1,5 @@
+Change Component Designator: OldDesignator=Vout NewDesignator=Vout Gain
+Added Component: Designator=Vout(TPTH)
+Added Pin To Net: NetName=NetJGAIN_2 Pin=Vout-1
+Added Member To Class: ClassName=Esquemático entero Member=Component Vout Gain TP
+Added Room: Name=Esquemático entero
