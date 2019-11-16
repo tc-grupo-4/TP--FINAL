@@ -1,0 +1,4 @@
+Circuit: * C:\Users\newtonis\InformesTC\TP7\Simulacion\KHN_test\Etapa1Test.asc
+
+Fatal Error: Voltage source V4 and voltage source V1 are paralleled making an over-defined circuit matrix.
+You will need to correct the circuit or add some series resistance.
