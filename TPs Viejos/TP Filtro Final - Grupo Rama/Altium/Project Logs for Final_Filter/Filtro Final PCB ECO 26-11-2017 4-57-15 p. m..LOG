@@ -1,0 +1,12 @@
+Removed Pin From Net: NetName=NetJGAIN_2 Pin=JGAIN-2
+Removed Pin From Net: NetName=NetJGAIN_3 Pin=JGAIN-3
+Change Component DesignItemId : Designator=JGAIN Old DesignItemId=JUMPER3 New DesignItemId=JUMPER
+Change Component Footprint: Designator=JGAIN Old Footprint=JUMPER3 New Footprint=JUMPER2
+Added Pin To Net: NetName=NetJGAIN_2 Pin=JGAIN-1
+Change Net Name : Old Net Name=NetJGAIN_2 New Net Name=NetJGAIN_1
+Change Net Name : Old Net Name=NetJGAIN_3 New Net Name=NetRg2_2
+Added Pin To Net: NetName=NetJGAIN_2 Pin=JGAIN-2
+Added Pin To Net: NetName=NetJGAIN_2 Pin=Rg1-1
+Added Pin To Net: NetName=NetJGAIN_2 Pin=Rg1-1
+Added Net: Name=NetJGAIN_2
+Added Room: Name=Esquemático entero

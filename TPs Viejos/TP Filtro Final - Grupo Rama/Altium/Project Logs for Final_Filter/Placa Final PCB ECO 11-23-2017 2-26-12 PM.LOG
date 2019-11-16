@@ -1,0 +1,82 @@
+Added Component: Designator=C1_3(CAP100)
+Added Component: Designator=C1_3(CAP100)
+Added Component: Designator=C1_21_1(CAP100)
+Added Component: Designator=C1_21_2(CAP100)
+Added Component: Designator=C1_22_1(CAP100)
+Added Component: Designator=C1_22_2(CAP100)
+Added Component: Designator=P1(HDR1X2)
+Added Component: Designator=P2(HDR1X2)
+Added Component: Designator=R1_1_1(RES400)
+Added Component: Designator=R1_1_2(RES400)
+Added Component: Designator=R1_41_1(RES400)
+Added Component: Designator=R1_41_2(RES400)
+Added Component: Designator=R1_42_1(RES400)
+Added Component: Designator=R1_42_2(RES400)
+Added Component: Designator=R1_a1_1(RES400)
+Added Component: Designator=R1_a1_2(RES400)
+Added Component: Designator=R1_a2_1(RES400)
+Added Component: Designator=R1_a2_2(RES400)
+Added Component: Designator=R1_b_1(PRESET V)
+Added Component: Designator=R1_b_2(RES400)
+Added Component: Designator=TP2(TPTH)
+Added Component: Designator=TP?(TPTH)
+Added Component: Designator=U1(N014)
+Added Pin To Net: NetName=GND Pin=C1_21_1-2
+Added Pin To Net: NetName=GND Pin=C1_21_2-2
+Added Pin To Net: NetName=GND Pin=R1_41_2-1
+Added Pin To Net: NetName=GND Pin=R1_a1_2-1
+Added Net: Name=GND
+Added Pin To Net: NetName=NetC1_3_1 Pin=C1_3-1
+Added Pin To Net: NetName=NetC1_3_1 Pin=C1_3-1
+Added Pin To Net: NetName=NetC1_3_1 Pin=C1_21_1-1
+Added Pin To Net: NetName=NetC1_3_1 Pin=C1_21_2-1
+Added Pin To Net: NetName=NetC1_3_1 Pin=C1_22_1-1
+Added Pin To Net: NetName=NetC1_3_1 Pin=C1_22_2-1
+Added Pin To Net: NetName=NetC1_3_1 Pin=R1_1_1-1
+Added Net: Name=NetC1_3_1
+Added Pin To Net: NetName=NetC1_3_2 Pin=C1_3-2
+Added Pin To Net: NetName=NetC1_3_2 Pin=C1_3-2
+Added Pin To Net: NetName=NetC1_3_2 Pin=R1_41_1-2
+Added Pin To Net: NetName=NetC1_3_2 Pin=R1_42_2-2
+Added Pin To Net: NetName=NetC1_3_2 Pin=U1-5
+Added Net: Name=NetC1_3_2
+Added Pin To Net: NetName=NetP1_1 Pin=P1-1
+Added Pin To Net: NetName=NetP1_1 Pin=R1_a1_1-2
+Added Pin To Net: NetName=NetP1_1 Pin=R1_a2_2-2
+Added Pin To Net: NetName=NetP1_1 Pin=U1-6
+Added Net: Name=NetP1_1
+Added Pin To Net: NetName=NetP1_2 Pin=P1-2
+Added Pin To Net: NetName=NetP1_2 Pin=R1_b_1-2
+Added Net: Name=NetP1_2
+Added Pin To Net: NetName=NetP2_1 Pin=P2-1
+Added Pin To Net: NetName=NetP2_1 Pin=R1_b_2-1
+Added Net: Name=NetP2_1
+Added Pin To Net: NetName=NetR1_1_1_2 Pin=R1_1_1-2
+Added Pin To Net: NetName=NetR1_1_1_2 Pin=R1_1_2-2
+Added Net: Name=NetR1_1_1_2
+Added Pin To Net: NetName=NetR1_1_2_1 Pin=R1_1_2-1
+Added Pin To Net: NetName=NetR1_1_2_1 Pin=U1-7
+Added Net: Name=NetR1_1_2_1
+Added Pin To Net: NetName=NetR1_41_1_1 Pin=R1_41_1-1
+Added Pin To Net: NetName=NetR1_41_1_1 Pin=R1_41_2-2
+Added Net: Name=NetR1_41_1_1
+Added Pin To Net: NetName=NetR1_42_1_2 Pin=R1_42_1-2
+Added Pin To Net: NetName=NetR1_42_1_2 Pin=R1_42_2-1
+Added Net: Name=NetR1_42_1_2
+Added Pin To Net: NetName=NetR1_a1_1_1 Pin=R1_a1_1-1
+Added Pin To Net: NetName=NetR1_a1_1_1 Pin=R1_a1_2-2
+Added Net: Name=NetR1_a1_1_1
+Added Pin To Net: NetName=NetR1_a2_1_2 Pin=R1_a2_1-2
+Added Pin To Net: NetName=NetR1_a2_1_2 Pin=R1_a2_2-1
+Added Net: Name=NetR1_a2_1_2
+Added Pin To Net: NetName=NetR1_b_1_3 Pin=R1_b_1-3
+Added Pin To Net: NetName=NetR1_b_1_3 Pin=R1_b_2-2
+Added Net: Name=NetR1_b_1_3
+Added Pin To Net: NetName=VINBUFF Pin=C1_22_1-2
+Added Pin To Net: NetName=VINBUFF Pin=C1_22_2-2
+Added Pin To Net: NetName=VINBUFF Pin=R1_42_1-1
+Added Pin To Net: NetName=VINBUFF Pin=R1_a2_1-1
+Added Pin To Net: NetName=VINBUFF Pin=TP2-1
+Added Net: Name=VINBUFF
+Added Class: Name=Esquemático entero
+Added Room: Name=Esquemático entero

@@ -1,0 +1,51 @@
+
+\begin{circuitikz}
+  	\draw (0,0) 
+  	
+%primer opamp
+  		node[op amp, yscale=1] (oa1) {}
+  		(oa1.+) -| (-1.5, -1.5) node[ground]{}
+  		(1.5,0) 	to [short] (oa1.out) 
+  		
+  		(oa1.-) 	to [short,-*] (-1.5,0.5)
+  					to [R, l=$R_3$] (-3.5, 0.5) 
+  					to [short,-o] (-4, 0.5) node[left]{$V_{in}$}
+%feedback primer opamp
+		(-1.5,0.5) 	to [short] (-1.5,2)
+					to [R,l_=$R_4$] (1.5,2)
+					to [short] (1.5,0)
+					
+		(-1.5,2)	to [short] (-1.5,3)
+					to [C,l=$C_1$] (1.5,3)
+					to [short] (1.5,2)
+						
+%segundo opamp
+		(5,0) node[op amp, yscale=1] (oa2) {}
+		(oa2.-) 	to [R, l=$R_4$] (1.5,0.5)
+		(oa2.+) -| (3.5, -1.5) node[ground]{}
+
+%feedback segundo opamp
+		(3.5,0.5)	to [short] (3.5,2)
+					to [C, l=$C_2$] (6.5,2)
+					|- (oa2.out)
+					
+					
+%tercer opamp
+		(10,0) node[op amp, yscale=1] (oa3) {}
+		(oa3.-) 	to [R, l=$R_5$] (6.5,0.5)
+		(oa3.+) -| (8.5, -1.5) node[ground]{}
+
+%feedback tercer opamp
+		(8.5,0.5)	to [short] (8.5,2)
+					to [R, l=$R_6$] (11.5,2)
+					|- (oa3.out)
+		
+%feedback global
+		(11.5,2)	to [short] (11.5,4)
+					to [R,l=$R_2$] (-1.5,4)
+					to [short] (-1.5,2)
+%salida
+		(11.5,0)	to [short, -o] (12,0) node[right] {$V_{out}$}				
+		
+  		;
+\end{circuitikz}

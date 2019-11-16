@@ -1,0 +1,126 @@
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{float}
+\usepackage{graphicx}
+
+%%%Todo lo de arriba viene de lyx y no se que hace
+
+\usepackage{subfiles}						%MULTIARCHIVOS, NO BORRAR
+
+%donde voy a buscar los archivos de imagenes 
+\graphicspath{{Informe/imagenes/}{Informe/}}	
+										
+
+\usepackage{nomencl}					%Para introducir nomenclaturas/definciones
+\usepackage{makecell}					%Para emprolijar celdas de tablas
+\usepackage{amsmath}
+\usepackage{amssymb}					%simbolos matematicos
+\usepackage{upgreek}					%puedo usar \uptau que es como \tau pero con mas rulito
+\usepackage{steinmetz}
+\usepackage{mathtools}
+\usepackage{placeins}
+\setlength{\columnsep}{0.6cm}
+\usepackage[left =2cm, right=2cm, top=1.5cm, bottom=2cm]{geometry}	%texto ocupa mas ancho de pagina
+\usepackage{xcolor}						%se usa en \code
+\usepackage[american]{circuitikz}		%dibujar esquematicos y diagramas
+\usepackage[parfill]{parskip}			%pone espacio entre parrafos
+\setlength{\parindent}{10pt}			%cuanta sangria al principio de un parrafo
+\usepackage{indentfirst}				%pone sangria al primer parrafo de una seccion
+\usepackage{gensymb}
+\usepackage{textcomp}
+\usepackage[hidelinks]{hyperref}
+\usepackage{pdfpages}
+\usepackage{csvsimple}
+\usepackage{adjustbox}
+\usepackage{slashbox}
+\usepackage{units}
+\usepackage{listings}
+\usepackage{stfloats}
+\usepackage{longtable}
+
+\setlength{\marginparwidth}{2cm}		%dar lugar a las todo notes en modo twocolumn
+
+
+% Swap the definition of \abs* and \norm*, so that \abs
+% and \norm resizes the size of the brackets, and the 
+% starred version does not.
+\DeclarePairedDelimiter\abs{\lvert}{\rvert} %
+\makeatletter	%magia de categoria de caracteres en Tex, ignorar
+\let\oldabs\abs 
+\def\abs{\@ifstar{\oldabs}{\oldabs*}}
+\let\oldnorm\norm
+\def\norm{\@ifstar{\oldnorm}{\oldnorm*}}
+\makeatother	%magia de categoria de caracteres en Tex, ignorar
+
+%Definicion comando \parsum: hace re piola el simbolo de la suma en paralelo
+\newcommand{\parsum}{\mathbin{\!/\mkern-5mu/\!}} 
+
+%Definicion comando \code: poen el texto en fuente monoespaciada con fondo gris 
+%al estilo del codigo de stack overflow
+\definecolor{light-gray}{gray}{0.95} 
+\newcommand{\code}[1]{\colorbox{light-gray}{\texttt{#1}}}
+
+%TODOs
+\usepackage[colorinlistoftodos]{todonotes}
+
+%
+\usepackage{subcaption}
+
+
+% separacion correcta de palabras en silabas
+\hyphenation{o-pe-ra-cio-nal}
+\hyphenation{o-pe-ra-cio-na-les}
+\hyphenation{si-guien-tes}
+\hyphenation{e-mu-lan-do}
+\hyphenation{co-rrien-te}
+\hyphenation{ob-te-ner}
+\hyphenation{ob-te-ne-mos}
+\hyphenation{ha-llar-se}
+\hyphenation{ca-pa-ci-tor}
+\hyphenation{trans-fe-ren-cia}
+\hyphenation{ma-ne-ra}
+\hyphenation{di-se-ño}
+\hyphenation{re-so-nan-cia}
+\hyphenation{mo-de-lar-se}
+\hyphenation{a-pro-xi-ma-da-men-te}
+\hyphenation{pseu-do-pe-rí-o-do}
+\hyphenation{res-pues-ta}
+\hyphenation{li-neal}
+\hyphenation{sa-tu-ra-ción}
+\hyphenation{e-le-va-da}
+\hyphenation{si-guien-te}
+\hyphenation{cons-tan-te}
+\hyphenation{es-pe-ra-do}
+\hyphenation{dis-po-si-ti-vo}
+\hyphenation{ins-tan-cia}
+\hyphenation{si-mu-la-cio-nes}
+\hyphenation{pro-ce-dien-do}
+\hyphenation{to-le-ran-cias}
+\hyphenation{co-rrien-tes}
+\hyphenation{va-lo-res}
+\hyphenation{pu-die-se}
+\hyphenation{des-co-no-cie-sen}
+\hyphenation{des-pués}
+\hyphenation{ins-tru-men-tal}
+\hyphenation{a-mi}
+\hyphenation{me-gus-tan}
+\hyphenation{ma-yo-res}
+
+
+
+
+
+
+
+
+%cambia las palabras que estan en ingles a castellano
+\AtBeginDocument{\renewcommand\contentsname{Índice}}
+\AtBeginDocument{\renewcommand\figurename{Figura}}
+\AtBeginDocument{\renewcommand\tablename{Tabla}}
+\AtBeginDocument{\renewcommand\chaptername{Ejercicio}}
+
+\definecolor{mygreen}{RGB}{28,172,0} % color values Red, Green, Blue
+\definecolor{mylilas}{RGB}{170,55,241}
+
+\makeatletter

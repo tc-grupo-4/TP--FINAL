@@ -1,0 +1,21 @@
+
+\begin{circuitikz}
+  	\draw (0,0) node[op amp, yscale=-1] (opamp) {}
+  		(opamp.-) -| (-1.5, -1.5) 
+  		 			to [short] (1.5, -1.5) 
+  					to [short, -*] (1.5, 0) 
+  					to [short, -o] (2, 0) node[right] {$V_{out}$}
+  		(1.5,0) 	to [short] (opamp.out) 
+  		
+  		(opamp.+) 	to [short, -*] (-2.5, 0.5) node[above]{$V^+$}
+  					to [R, l=$R_2$] (-2.5, -1.5) node[ground]{}
+  		
+		(-2.5, 0.5) to [C, l=$C_2$] (-4.5, 0.5)
+					to [C, l=$C_1$, *-o] (-6.5, 0.5) node[left]{$V_{in}$}  		
+
+	
+		(-4.5, 0.5) to [short, -*] (-4.5, 2) node[above] {$V_f$}
+					to [R, l=$R_f$] (1.5,2)
+					to [short] (1.5,0)
+  		;
+\end{circuitikz}

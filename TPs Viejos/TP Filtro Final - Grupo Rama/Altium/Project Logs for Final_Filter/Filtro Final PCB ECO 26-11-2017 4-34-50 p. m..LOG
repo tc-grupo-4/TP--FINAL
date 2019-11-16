@@ -1,0 +1,4 @@
+Removed Pin From Net: NetName=GND Pin=GND2-1
+Removed Member From Class: ClassName=Esquemático entero Member=GND2
+Added Member To Class: ClassName=Esquemático entero Member=Component Vout TP
+Added Room: Name=Esquemático entero

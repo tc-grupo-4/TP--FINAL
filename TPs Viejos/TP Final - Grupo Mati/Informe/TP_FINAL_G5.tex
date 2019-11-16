@@ -1,0 +1,681 @@
+%% LyX 2.3.1-1 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[english,spanish]{article}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage{geometry}
+\geometry{verbose,tmargin=2cm,bmargin=2cm,lmargin=2cm,rmargin=2cm,headheight=2cm,headsep=2cm,footskip=2cm}
+\usepackage{float}
+\usepackage{textcomp}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+\makeatletter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+%% Because html converters don't know tabularnewline
+\providecommand{\tabularnewline}{\\}
+
+\makeatother
+
+\usepackage{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+
+\begin{document}
+\selectlanguage{english}%
+\begin{titlepage}
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}       
+\center        
+%---------------------------------------------------------------------------------------- 
+%	HEADING SECTIONS 
+%----------------------------------------------------------------------------------------      
+\textsc{\LARGE Instituto Tecnológico de Buenos Aires}\\[2cm]  
+\textsc{\Large 22.01 Teoría de Circuitos}\\[1.5cm]  
+\textsc{\large Trabajo Práctico Final }\\[0.5cm]
+%---------------------------------------------------------------------------------------- 
+%	TITLE SECTION 
+%----------------------------------------------------------------------------------------      
+\HRule \\[0.5cm] 
+{ \huge Filtro Final}
+\\[0.4cm]  \HRule \\[2cm]       
+%---------------------------------------------------------------------------------------- 
+%	AUTHOR SECTION 
+%----------------------------------------------------------------------------------------      
+\begin{minipage}{0.4\textwidth} \begin{flushleft} \large 
+\emph{Grupo 5:}\\		 [.3cm] 
+Matías \textsc{Larroque}\\ Leg. 56597\\  [.3cm] 
+Lucero Guadalupe \textsc{Fernandez}\\ Leg. 57485\\  [.3cm] 
+Manuel \textsc{Mollón}\\ Leg. 58023 \\  [.3cm] 
+Ezequiel \textsc{Vijande}\\ Leg. 58057\\  [.3cm] 
+\end{flushleft} \end{minipage} ~ 
+\begin{minipage}{0.4\textwidth} \begin{flushright} \large 
+\emph{Profesor:} \\ [.3cm] 
+Daniel  \textsc{Jacoby}\\ 
+Carlos  \textsc{Belaustegui Goitia} \\ 
+Rodrigo  \textsc{Iribarren} 
+\end{flushright} \end{minipage}\\[2cm]      
+%---------------------------------------------------------------------------------------- 
+%	DATE SECTION 
+%----------------------------------------------------------------------------------------      
+\vfill {\large Entregado: 27 de Noviembre de 2018}\\[2cm]      \vfill       
+\end{titlepage}
+
+\newpage{}
+
+\selectlanguage{spanish}%
+\tableofcontents{}
+
+\newpage{}
+
+\section{Introducción}
+
+En el siguiente trabajo se busco realizar la implementación física
+de un filtro que cumpla una determinada plantilla. Para realizar dicho
+filtro se diseñaron múltiples filtros de segundo orden y se dispuso
+de los mismos en conexión cascada.
+
+Para el diseño del filtro se considero las sensibilidades de la celda
+elegida, los tipos de filtro a diseñar, impedancias de entrada y de
+salida así también como el rango dinámico del filtro.
+
+\newpage{}
+
+\section{Objetivos y resumen}
+
+El objetivo del filtro diseñado es el de cumplir la siguiente plantilla:
+\begin{center}
+\begin{table}[H]
+\begin{centering}
+{\scriptsize{}}%
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+\hline 
+{\scriptsize{}$A_{p}(dB)$} & {\scriptsize{}$A_{s}(dB)$} & {\scriptsize{}B} & {\scriptsize{}$f_{p}^{-}(KHz)$} & {\scriptsize{}$f_{p}^{+}(KHz)$} & {\scriptsize{}$f_{a}^{-}(KHz)$} & {\scriptsize{}$f_{a}^{+}(KHz)$} & {\scriptsize{}$f_{0}(KHz)$} & {\scriptsize{}Aprox} & {\scriptsize{}Rango dinámico(dB)}\tabularnewline
+\hline 
+\hline 
+{\scriptsize{}1} & {\scriptsize{}45} & {\scriptsize{}0.5} & {\scriptsize{}7.8} & {\scriptsize{}12.5} & {\scriptsize{}9.2} & {\scriptsize{}10.87} & {\scriptsize{}10} & {\scriptsize{}Cheby inverso} & {\scriptsize{}45}\tabularnewline
+\hline 
+\end{tabular}{\scriptsize\par}
+\par\end{centering}
+\caption{Plantilla a cumplir}
+\end{table}
+\par\end{center}
+
+Se desea que ademas de cumplir dicha plantilla, que el filtro no gane
+mas de 0dB para ninguna frecuencia así como que tambien cumpla las
+exigencias de la banda de paso para una frecuencia de hasta 100KHz.
+
+Se dividió el filtro en múltiples etapas, cada una con una transferencia
+de segundo orden e implementada con una celda Fleischer Tow. Para
+todas las transferencias de segundo orden obtenidas se obtuvieron
+filtros Notch. Se utilizo un software para determinar la agrupación
+de polos y ceros de manera optima tal que se maximice el rango dinámico
+así como también el ordenamiento de las etapas.
+
+\newpage{}
+
+\section{Análisis teórico}
+
+\subsection{Polos, ceros y agrupación de Etapas}
+
+Los polos y ceros se agruparon en etapas de segundo orden de forma
+tal que los pares de polos y ceros mas cercanos queden en la misma
+etapa. La lógica de este procedimiento es que los ceros y los polos
+tiendan a anularse por lo que se resularia en la ganancia mas cercana
+a 0dB posible. No es deseable que una etapa atenúe mucho, ya que se
+disminuiría la relación señal ruido y la próxima entrada recibiría
+una entrada pobre.Asimismo, tampoco es deseable que las etapas tengan
+ganancias elevadas ya que podrían generar entradas que causen alinealidades
+en la etapa siguiente(como por ejemplo saturación).
+
+Para el ordenamiento de etapas se eligieron las mismas tal que las
+etapas de Q mas bajo sean las primeras y las de mayores Q sean las
+ultimas. Esto es para asegurar que los mayores sobrepicos estén al
+final de la configuración.
+
+\subsection{Primera Etapa}
+
+Para la primera etapa se obtuvo un filtro del tipo Low-Pass Notch.
+La gráfica del bode de la transferencia teórica a realizar es:
+\begin{center}
+\begin{figure}[H]
+\begin{centering}
+\includegraphics[scale=0.3]{Imagenes/Stage1_Att}
+\par\end{centering}
+\caption{Gráfica de Atenuacion de la etapa 1}
+
+\end{figure}
+\par\end{center}
+
+Los parámetros de dicho filtro son:
+\begin{center}
+\begin{table}[H]
+
+\begin{centering}
+\begin{tabular}{|c|c|c|}
+\hline 
+$f_{0}(kHz)$ & $Q$ & $k$\tabularnewline
+\hline 
+\hline 
+9.5 & 3.57 & 1\tabularnewline
+\hline 
+\end{tabular}
+\par\end{centering}
+\caption{Parámetros de la etapa 1}
+
+\end{table}
+\par\end{center}
+
+\subsection{Segunda etapa}
+
+Esta etapa consiste en un filtro High-Pass Notch. La gráfica de atenuación
+correspondiente es\@.
+\begin{center}
+\begin{figure}[H]
+\begin{centering}
+\includegraphics[scale=0.3]{Imagenes/Stage2_Att}
+\par\end{centering}
+\caption{Atenuación de la etapa 2}
+
+\end{figure}
+\par\end{center}
+
+Con los parámetros:
+\begin{center}
+\begin{table}[H]
+\begin{centering}
+\begin{tabular}{|c|c|c|}
+\hline 
+$f_{0}(kHz)$ & $Q$ & $k$\tabularnewline
+\hline 
+\hline 
+10.5 & 3.57 & 1\tabularnewline
+\hline 
+\end{tabular}
+\par\end{centering}
+\caption{Parámetros de la etapa 2}
+\end{table}
+\par\end{center}
+
+\subsection{Tercera etapa}
+
+Esta etapa consiste en un filtro Low-Pass Notch. La gráfica de atenuación
+correspondiente es\@.
+\begin{center}
+\begin{figure}[H]
+\begin{centering}
+\includegraphics[scale=0.3]{Imagenes/Stage3_Att}
+\par\end{centering}
+\caption{Atenuación de la etapa 3}
+\end{figure}
+\par\end{center}
+
+Con los parámetros:
+\begin{center}
+\begin{table}[H]
+\begin{centering}
+\begin{tabular}{|c|c|c|}
+\hline 
+$f_{0}(kHz)$ & $Q$ & $k$\tabularnewline
+\hline 
+\hline 
+10.5 & 3.57 & 1\tabularnewline
+\hline 
+\end{tabular}
+\par\end{centering}
+\caption{Parámetros de la etapa 3}
+\end{table}
+\par\end{center}
+
+\subsection{Cuarta etapa}
+
+Esta etapa consiste en un filtro High-Pass Notch. La gráfica de atenuación
+correspondiente es\@.
+\begin{center}
+\begin{figure}[H]
+\begin{centering}
+\includegraphics[scale=0.3]{Imagenes/Stage4_Att}
+\par\end{centering}
+\caption{Atenuación de la etapa 4}
+\end{figure}
+\par\end{center}
+
+Con los parámetros:
+\begin{center}
+\begin{table}[H]
+\begin{centering}
+\begin{tabular}{|c|c|c|}
+\hline 
+$f_{0}(kHz)$ & $Q$ & $k$\tabularnewline
+\hline 
+\hline 
+11.4 & 4.91 & 1\tabularnewline
+\hline 
+\end{tabular}
+\par\end{centering}
+\caption{Parámetros de la etapa 4}
+\end{table}
+\par\end{center}
+
+\subsection{Quinta etapa}
+
+Esta etapa consiste en un filtro Low-Pass Notch. La gráfica de atenuación
+correspondiente es\@.
+\begin{center}
+\begin{figure}[H]
+\begin{centering}
+\includegraphics[scale=0.3]{Imagenes/Stage5_Att}
+\par\end{centering}
+\caption{Atenuación de la etapa 5}
+\end{figure}
+\par\end{center}
+
+Con los parámetros:
+\begin{center}
+\begin{table}[H]
+\begin{centering}
+\begin{tabular}{|c|c|c|}
+\hline 
+$f_{0}(kHz)$ & $Q$ & $k$\tabularnewline
+\hline 
+\hline 
+8.4 & 13.52 & 1\tabularnewline
+\hline 
+\end{tabular}
+\par\end{centering}
+\caption{Parámetros de la etapa 5}
+\end{table}
+\par\end{center}
+
+\subsection{Sexta etapa}
+
+Esta etapa consiste en un filtro High-Pass Notch. La gráfica de atenuación
+correspondiente es\@.
+\begin{center}
+\begin{figure}[H]
+\begin{centering}
+\includegraphics[scale=0.3]{Imagenes/Stage6_Att}
+\par\end{centering}
+\caption{Atenuación de la etapa 6}
+\end{figure}
+\par\end{center}
+
+Con los parámetros:
+\begin{center}
+\begin{table}[H]
+\begin{centering}
+\begin{tabular}{|c|c|c|}
+\hline 
+$f_{0}(kHz)$ & $Q$ & $k$\tabularnewline
+\hline 
+\hline 
+11.9 & 13.52 & 1\tabularnewline
+\hline 
+\end{tabular}
+\par\end{centering}
+\caption{Parámetros de la etapa 6}
+\end{table}
+\par\end{center}
+
+\subsection{Celda Fleischer-Tow}
+
+En la siguiente sección se presentan los desarrollos y análisis matemáticos
+mas importantes para la celda Fleischer-Tow:
+
+\begin{figure}[H]
+\begin{centering}
+\includegraphics[scale=0.4]{Imagenes/FleischerTowGenerica.JPG}
+\par\end{centering}
+\caption{Celda Fleischer Tow a analizar}
+\end{figure}
+\begin{quotation}
+Se eligio dicha celda debido a sus excelentes sensibilidades (desarrolladas
+en la sección \ref{sec:Sensibilidades}), su habilidad para trabajar
+con filtros con Q altos y el hecho de que tiene una salida Notch sin
+necesidad de agregar un sumador a la celda.
+\end{quotation}
+
+\subsubsection{Función transferencia}
+
+El siguiente análisis se hará considerando amplificadores operacionales
+ideales, estos significa que se considera nula la corriente a la entrada
+de los operacionales, así como también se cumple que:
+\begin{center}
+$v_{1}=v_{3}=v_{5}=0V$
+\par\end{center}
+
+En dichas condiciones, planteando las ecuaciones de nodos correspondientes
+se obtiene el siguiente sistema de ecuaciones lineales:
+
+$\begin{cases}
+\begin{array}{c}
+-\frac{v_{in}}{R_{3}}=v_{2}(\frac{1}{R_{2}}+sC_{1})+v_{6}(\frac{1}{R_{1}})\\
+-\frac{v_{in}}{R_{7}}=\frac{v_{out}}{R_{5}}+\frac{v_{2}}{R_{4}}\\
+-\frac{v_{in}}{R_{8}}=v_{6}(sC_{2})+v_{out}(\frac{1}{R_{6}})
+\end{array}\end{cases}$
+
+Dicho sistema se resolvió mediante la función linsolve del paquete
+sympy de Python y se llego a la siguiente función transferencia:
+\begin{center}
+\begin{equation}
+\frac{v_{out}}{v_{in}}=H(s)=-\frac{R_{5}R_{6}}{R_{3}R_{7}R_{8}}\frac{s^{2}C_{1}C_{2}R_{1}R_{2}R_{3}R_{4}R_{8}+sC_{2}R_{1}R_{8}(R_{3}R_{4}-R_{2}R_{7})+R_{2}R_{3}R_{7}}{s^{2}C_{1}C_{2}R_{1}R_{2}R_{4}R_{6}+sC_{2}R_{1}R_{4}R_{6}+R_{2}R_{5}}
+\end{equation}
+\par\end{center}
+
+Se puede ver fácilmente de la expresión anterior que se puede anular
+el termino correspondiente a la primera potencia de s en el numerador,
+si se plantea la relación:
+\begin{center}
+\begin{equation}
+R_{3}R_{4}=R_{2}R_{7}\label{eq:2}
+\end{equation}
+\par\end{center}
+
+Entonces de (1) y e (2), se tiene que la función transferencia puede
+reescribirse de la forma conocida de un filtro Notch como:
+\begin{center}
+{\Large{}$H(s)=k\frac{(\frac{s}{\omega_{z}})^{2}+1}{(\frac{s}{\omega_{p}})^{2}+\frac{s}{\omega_{p}Q}+1}$}{\Large\par}
+\par\end{center}
+
+Donde:
+
+$\begin{cases}
+\begin{array}{c}
+k=-\frac{R_{6}}{R_{8}}\\
+\omega_{z}=\sqrt{\frac{R_{7}}{C_{1}C_{2}R_{1}R_{4}R_{8}}}\\
+\omega_{p}=\sqrt{\frac{R_{5}}{C_{1}C_{2}R_{1}R_{4}R_{6}}}\\
+Q=R_{2}\sqrt{\frac{C_{1}R_{5}}{C_{2}R_{1}R_{4}R_{6}}}
+\end{array}\end{cases}$
+
+\subsubsection{Impedancia de entrada}
+
+Para el calculo de la impedancia de entrada con amplificadores operacionales
+ideales, se planteo que:
+\begin{center}
+{\large{}$I_{in}=\frac{v_{in}}{R_{3}}+\frac{v_{in}}{R_{7}}+\frac{v_{in}}{R_{8}}$}{\large\par}
+\par\end{center}
+
+Despejando se llega a :
+
+\begin{equation}
+\frac{V_{in}}{I_{in}}=Z_{inp}=\frac{1}{\frac{1}{R_{3}}+\frac{1}{R_{7}}+\frac{1}{R_{8}}}=R_{3}//R_{7}//R_{8}
+\end{equation}
+
+Debido a que la impedancia de entrada es el paralelo de tres resistencias,
+si se desea lograr una celda Tow Fleischer con alta impedancia de
+entrada se requiere que tanto $R_{3}$ como $R_{7}$y $R_{8}$ tomen
+valores altos ya que la impedancia de entrada tomara como mucho el
+valor de la resistencia mas pequeña de las tres.Como alternativa,
+debe utilizarse un buffer a la entrada para tener un alto valor de
+impedancia de entrada sin importar los valores de $R_{3},R_{7}$ y
+$R_{8}$.
+
+\newpage{}
+
+\section{Sensibilidades\label{sec:Sensibilidades}}
+
+A continuación se presenta un cuadro de las sensibilidades relativas
+correspondientes a los parámetros característicos del filtro Notch
+de segundo orden que consiste en cada una de las dos etapas del filtro:
+\begin{center}
+\begin{table}[H]
+\begin{centering}
+\begin{tabular}{|c|c|c|c|c|}
+\hline 
+ & $S_{x}^{k}$ & $S_{x}^{\omega_{z}}$ & $S_{x}^{\omega_{p}}$ & $S_{x}^{Q}$\tabularnewline
+\hline 
+\hline 
+$R_{1}$ & 0 & -0.5 & -0.5 & -0.5\tabularnewline
+\hline 
+$R_{2}$ & 0 & 0 & 0 & 1\tabularnewline
+\hline 
+$R_{3}$ & 0 & 0 & 0 & 0\tabularnewline
+\hline 
+$R_{4}$ & 0 & -0.5 & -0.5 & -0.5\tabularnewline
+\hline 
+$R_{5}$ & 0 & 0 & 0.5 & 0.5\tabularnewline
+\hline 
+$R_{6}$ & 1 & 0 & -0.5 & -0.5\tabularnewline
+\hline 
+$R_{7}$ & 0 & 0.5 & 0 & 0\tabularnewline
+\hline 
+$R_{8}$ & -1 & -0.5 & 0 & 0\tabularnewline
+\hline 
+$C_{1}$ & 0 & -0.5 & -0.5 & 0.5\tabularnewline
+\hline 
+$C_{2}$ & 0 & -0.5 & -0.5 & -0.5\tabularnewline
+\hline 
+\end{tabular}
+\par\end{centering}
+\caption{\label{tab:Sensibilidades-de-los}Sensibilidades de los parámetros
+del Notch}
+\end{table}
+\par\end{center}
+
+Para llegar a la transferencia de un Notch asumimos que se cumple
+la condición \ref{eq:2}.Dicha condición nunca se cumplirá de forma
+exacta, y en dicho caso se puede encontrar que la expresión que determina
+el factor de calidad de los ceros del numerador es:
+\begin{center}
+\begin{equation}
+Q_{z}=\sqrt{\frac{C_{1}R_{4}R_{7}}{C_{2}R_{1}R_{8}}}.\frac{R_{2}R_{3}}{R_{3}R_{4}-R_{2}R_{7}}
+\end{equation}
+\par\end{center}
+
+Se procedió a calcular las sensibilidades de dicho parámetro y se
+llego a la siguiente tabla:
+\begin{center}
+\begin{table}[H]
+\begin{centering}
+\begin{tabular}{|c|c|}
+\hline 
+ & $S_{x}^{Q_{z}}$\tabularnewline
+\hline 
+\hline 
+$R_{1}$ & -0.5\tabularnewline
+\hline 
+$R_{2}$ & $-\frac{R_{3}R_{4}}{R_{2}R_{7}-R_{3}R_{4}}$\tabularnewline
+\hline 
+$R_{3}$ & $\frac{R_{2}R_{7}}{R_{2}R_{7}-R_{3}R_{4}}$\tabularnewline
+\hline 
+$R_{4}$ & $\frac{R_{2}R_{7}+R_{3}R_{4}}{2(R_{2}R_{7}-R_{3}R_{4})}$\tabularnewline
+\hline 
+$R_{5}$ & 0\tabularnewline
+\hline 
+$R_{6}$ & 0\tabularnewline
+\hline 
+$R_{7}$ & -$\frac{R_{2}R_{7}+R_{3}R_{4}}{2(R_{2}R_{7}-R_{3}R_{4})}$\tabularnewline
+\hline 
+$R_{8}$ & -0.5\tabularnewline
+\hline 
+$C_{1}$ & 0.5\tabularnewline
+\hline 
+$C_{2}$ & -0.5\tabularnewline
+\hline 
+\end{tabular}
+\par\end{centering}
+\caption{Sensibilidades de $Q_{z}$}
+\end{table}
+\par\end{center}
+
+Ya que la relación clave para que el filtro sea un Notch ideal es
+la que esta dada en la ecuación \ref{eq:2}, se definió el siguiente
+parámetro:
+\noindent \begin{center}
+$T=R_{3}R_{4}-R_{2}R_{7}$
+\par\end{center}
+
+Dado que el valor nominal de T es 0, $Q_{z}$ no es derivable para
+dicho valor de T y se llegan a sensibilidades absurdas por lo que
+se realizo el análisis utilizando la definición de variabilidad relativa
+para un parámetro 'parasito':
+\noindent \begin{center}
+$\frac{\triangle Q_{z}(T=0)}{\triangle T}.\frac{1}{Q(T=0)}=PS_{T}^{Q_{z}}$
+\par\end{center}
+
+Utilizando dicha expresión se llega a que:
+\noindent \begin{center}
+$PS_{T}^{Q_{z}}=-\frac{1}{\triangle T}$
+\par\end{center}
+
+Se puede ver de la expresión obtenida que el parámetro $Q_{z}$ es
+altamente sensible al valor de T y que para pequeñas variaciones del
+mismo $Q_{z}$ disminuye drásticamente. Asimismo, para los otros parámetros
+para los que se llegaba a un absurdo en la sensibilidad cuando se
+cumple la relación \ref{eq:2} se realizo el análisis de variabilidad
+semirelativa y se llego a la siguiente tabla:
+\begin{center}
+\begin{table}[H]
+\noindent \begin{centering}
+\begin{tabular}{|c|c|}
+\hline 
+$x$ & $PS_{x}^{Q_{z}}$\tabularnewline
+\hline 
+\hline 
+$R_{2}$ & $1$\tabularnewline
+\hline 
+$R_{3}$ & 1\tabularnewline
+\hline 
+$R_{4}$ & $\frac{R_{4}}{\triangle R_{4}}(\sqrt{1+\frac{\triangle R_{4}}{R_{4}}}-1)\thickapprox0.5$\tabularnewline
+\hline 
+$R_{7}$ & $\frac{R_{7}}{\triangle R_{7}}(\sqrt{1+\frac{\triangle R_{7}}{R_{7}}}-1)\thickapprox0.5$\tabularnewline
+\hline 
+\end{tabular}
+\par\end{centering}
+\caption{Tabla de variabilidades semirelativas}
+\end{table}
+\par\end{center}
+
+Para llegar a los valores numéricos de la tabla anterior se asumió
+que $\triangle R=\pm0.01R$.
+
+\section{Implementacion fisica}
+
+Para la implementacionfisica de la placa se eligieron los siguientes
+componentes:
+
+\begin{table}[H]
+\begin{centering}
+{\scriptsize{}}%
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|}
+\hline 
+{\scriptsize{}Etapas} & {\scriptsize{}$R_{1}(K\Omega)$} & {\scriptsize{}$R_{2}(K\Omega)$} & {\scriptsize{}$R_{3}(K\Omega)$} & {\scriptsize{}$R_{4}(K\Omega)$} & {\scriptsize{}$R_{5}(K\Omega)$} & {\scriptsize{}$R_{6}(K\Omega)$} & {\scriptsize{}$R_{7}(K\Omega)$} & {\scriptsize{}$R_{8}(K\Omega)$} & {\scriptsize{}$C_{1}(nf)$} & {\scriptsize{}$C_{2}(nf)$}\tabularnewline
+\hline 
+\hline 
+{\scriptsize{}Etapa 1} & {\scriptsize{}4.5} & {\scriptsize{}59.6} & {\scriptsize{}180} & {\scriptsize{}59.6} & {\scriptsize{}172} & {\scriptsize{}178} & {\scriptsize{}180} & {\scriptsize{}180} & {\scriptsize{}1} & {\scriptsize{}1}\tabularnewline
+\hline 
+{\scriptsize{}Etapa 2} & 4.4 & 54.2 & 180 & 54.2 & 185 & 178 & 180 & 180 & {\scriptsize{}1} & {\scriptsize{}1}\tabularnewline
+\hline 
+{\scriptsize{}Etapa 3} & 3.15 & 66 & 180 & 66 & 197 & 178 & 180 & 180 & {\scriptsize{}1} & {\scriptsize{}1}\tabularnewline
+\hline 
+{\scriptsize{}Etapa 4} & 3.3 & 89 & 180 & 89 & 161 & 178 & 180 & 180 & {\scriptsize{}1} & {\scriptsize{}1}\tabularnewline
+\hline 
+{\scriptsize{}Etapa 5} & 1.2 & 247 & 180 & 247 & 156 & 178 & 180 & 180 & {\scriptsize{}1} & {\scriptsize{}1}\tabularnewline
+\hline 
+{\scriptsize{}Etapa 6} & 1.1 & 190 & 180 & 190 & 205 & 178 & 180 & 180 & {\scriptsize{}1} & {\scriptsize{}1}\tabularnewline
+\hline 
+\end{tabular}{\scriptsize\par}
+\par\end{centering}
+\caption{Componentes elegidos}
+
+\end{table}
+A continuacion se presenta una grafica de las mediciones del filtro
+realizado:
+\begin{center}
+\begin{figure}[H]
+\caption{Funcion transferencia medida}
+
+\end{figure}
+\par\end{center}
+
+\newpage{}
+
+\section{Análisis de rango dinámico}
+
+\newpage{}
+
+\section{Limitaciones de carga}
+
+Las limitaciones de la carga del filtro se deben principalmente a
+la corriente maxima que puede entregar el amplificador operacional.
+Para el filtro realizado se utilizo unicamente amplificadores operacionales
+TL084, de la datasheet del mismo se obtiene que:
+
+\newpage{}
+
+\section{Estabilidad}
+
+Cada etapa del filtro realizado constituye de una celda Fleischer
+Tow, esto significa que cada etapa es un sistema retroailmentado.
+Para establecer que tan estable es cada etapa se utilizaron las siguientes
+definiciones de margen de fase y margen de ganancia:
+
+\begin{equation}
+\phi_{m}=\phi(f_{x})\label{eq:Margen de fase}
+\end{equation}
+
+\begin{equation}
+G_{m}(dB)=0-\text{|\ensuremath{T(f_{y})}|}\label{eq:Margen de ganancia}
+\end{equation}
+
+Donde $f_{x}$ es la frecuencia en la que la ganancia de lazo es 0dB
+y $f_{y}$ es la frecuencia en la que la ganancia llega al primer
+múltiplo de 360°.
+
+Para conseguir los parámetros definidos anteriormente se simulo la
+ganancia de lazo para cada etapa del filtro y se realizo el diagrama
+de bode de dicha ganancia. Los resultado s obtenidos de la simulación
+fueron:
+\begin{center}
+\begin{figure}[H]
+\begin{centering}
+\includegraphics[scale=0.3]{Imagenes/GananciasDeLazo.JPG}
+\par\end{centering}
+\caption{Ganancias de lazo superpuestas}
+
+\end{figure}
+\par\end{center}
+
+\begin{center}
+\begin{figure}[H]
+\begin{centering}
+\includegraphics[scale=0.3]{Imagenes/FaseDeLazo.JPG}
+\par\end{centering}
+\caption{Fase de las ganancias de lazo}
+
+\end{figure}
+\par\end{center}
+
+De las gráficas anteriores se obtienen los siguientes valores para
+los margenes de ganancia y de fase de cada etapa:
+\begin{center}
+\begin{table}[H]
+\begin{centering}
+\begin{tabular}{|c|c|c|}
+\hline 
+Etapas & $\phi_{m}$(deg) & $G_{m}$(dB)\tabularnewline
+\hline 
+\hline 
+1 & 91 & 110\tabularnewline
+\hline 
+2 & 91 & 110\tabularnewline
+\hline 
+3 & 91 & 112\tabularnewline
+\hline 
+4 & 92 & 115\tabularnewline
+\hline 
+5 & 90 & 75\tabularnewline
+\hline 
+6 & 93 & 120\tabularnewline
+\hline 
+\end{tabular}
+\par\end{centering}
+\caption{Margenes de las distintas etapas}
+
+\end{table}
+\par\end{center}
+
+\newpage{}
+
+\section{Conclusiones}
+\end{document}
