@@ -1,0 +1,53 @@
+Circuit: * C:\Users\joa-m\InformesTC\TP7\Impedancias\Completo_ZIN\FiltroHP_N10_MC.asc
+
+WARNING: Less than two connections to node NC_01.  This node is used by R2.
+WARNING: Less than two connections to node NC_02.  This node is used by R17.
+WARNING: Less than two connections to node NC_03.  This node is used by R33.
+WARNING: Less than two connections to node NC_04.  This node is used by R35.
+Early termination of direct N-R iteration.
+Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
+Starting Gmin stepping
+Increasing initial diagonal Gmin to 100
+Gmin = 100
+vernier = 0.5
+vernier = 0.25
+Gmin = 29.1271
+vernier = 0.125
+vernier = 0.0625
+vernier = 0.03125
+Gmin = 27.3805
+vernier = 0.015625
+vernier = 0.0078125
+vernier = 0.00390625
+vernier = 0.00195313
+vernier = 0.000976563
+Gmin = 27.5406
+vernier = 0.000488281
+Gmin = 0
+Gmin stepping failed
+
+Starting source stepping with srcstepmethod=0
+Source Step = 3.0303%
+Source Step = 33.3333%
+Source Step = 63.6364%
+Source Step = 93.9394%
+Source stepping succeeded in finding the operating point.
+
+
+Date: Tue Nov 27 01:33:39 2018
+Total elapsed time: 0.925 seconds.
+
+tnom = 27
+temp = 27
+method = trap
+totiter = 1719
+traniter = 0
+tranpoints = 0
+accept = 0
+rejected = 0
+matrix size = 352
+fillins = 1358
+solver = Normal
+Matrix Compiler1:    6952 opcodes
+Matrix Compiler2: 54.40 KB object code size  19.7/22.4/[8.6]
+

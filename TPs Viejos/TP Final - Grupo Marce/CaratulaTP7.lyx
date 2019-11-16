@@ -1,0 +1,525 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\newcommand{\materia}[1]{\def\lamateria{#1}}
+\newcommand{\trabajo}[1]{\def\eltrabajo{#1}}
+\newcommand{\titulo}[1]{\def\eltitulo{#1}}
+\newcommand{\fecha}[1]{\def\lafecha{#1}}
+\newcommand{\grupo}[1]{\def\elgrupo{#1}}
+\usepackage{graphicx}
+
+
+
+
+%Vertical.
+\voffset			= -15.4mm	%Off-set vertical (1in + \voffset) respecto del borde superior del papel.
+\topmargin			= 0cm		%Desde el \hoffset hasta el inicio de la cabecera.
+\headheight			= 5mm		%Altura de la cabecera y pie de pagina.
+\headsep			= 5mm		%Distancia entre el fin de la cabecera y el inicio del cuerpo.
+\topskip			= 0mm		%Distancia del inicio del cuerpo hasta la primera linea de texto.
+\textheight			= 257mm 	%Altura de texto.
+\footskip			= 10mm		%Distancia de las partes inferiores del texto y el pie de pagina.
+\marginparpush		= 1mm		%Distancia entre los parrafos del margen (margin notes).
+
+%Horizontal
+\hoffset			= -5.4mm	%Off-set horizontal (1in + \hoffset) respecto del borde izquierdo del papel.
+\oddsidemargin		= 0cm		%Desde el \voffset hasta el inicio del texto.
+\textwidth			= 170mm		%Ancho de texto.
+\marginparsep		= 0mm		%Separacion entre el fin del texto y el inicio del margen.
+\marginparwidth		= 0mm		%Ancho del margen.
+\columnsep			= 5mm		%Separacion entre columas (cuando las haya).
+\columnseprule		= 0pt		%Ancho de la linea divisora de columnas (cuando las haya).
+
+%Parrafo
+\parindent			= 0mm		%Sangria al inicio del parrafo.
+\parskip			= 5mm		%Distancia entre parrados.
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize a4paper
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+materia{Teoría de Circuitos}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+trabajo{FILTRO PASA ALTOS}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+titulo{Trabajo de Laboratorio Final}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+fecha{27 de Noviembre 2018} %Aca va la fecha.
+ Si lo dejan asi muestra la fecha de compilacion.
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+grupo{1}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{titlepage}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rule{
+\backslash
+textwidth}{1.5pt}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rule[0.5cm]{
+\backslash
+textwidth}{1.5pt}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vfill
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{minipage}[c]{
+\backslash
+textwidth}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+includegraphics[width=10cm]{LogoItba}
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+{
+\backslash
+large{Instituto Tecnol
+\backslash
+'ogico de Buenos Aires}}
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+{
+\backslash
+small{
+\backslash
+lafecha}}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{4.5cm}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newlength{
+\backslash
+titleWidth}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+settowidth{
+\backslash
+titleWidth}{
+\backslash
+Huge{
+\backslash
+lamateria}}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+{
+\backslash
+Large{
+\backslash
+eltrabajo}}
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+{
+\backslash
+normalsize{
+\backslash
+eltitulo}}
+\backslash
+
+\backslash
+[0.7cm]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rule[2mm]{
+\backslash
+titleWidth}{1pt}
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+{
+\backslash
+Huge{
+\backslash
+lamateria}}
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{1mm}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rule[3mm]{
+\backslash
+titleWidth }{1pt}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{0.5cm}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Grupo 
+\backslash
+elgrupo
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{4cm}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tabular}{lcr}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+emph{Nombre}&
+\backslash
+emph{Legajo}
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Ariel Nowik & 58309
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Joaquín Mestanza & 58288 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Marcelo Regueira & 58300
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Martina Máspero & 57120 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tabular}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{minipage}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vfill
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rule[-0.5cm]{
+\backslash
+textwidth}{1.5pt}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rule{
+\backslash
+textwidth}{1.5pt}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{titlepage}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
