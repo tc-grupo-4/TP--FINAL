@@ -1,0 +1,49 @@
+\documentclass[a4paper,12pt,spanish]{report}
+
+% Paquetes para Diagramas de Circuitos
+\usepackage{tikz}
+\usepackage[american, oldvoltagedirection]{circuitikz}
+
+\usepackage{pgfplots}
+\pgfplotsset{width=10cm, compat=1.9}
+
+% Paquetes de Definicion de Idioma
+\usepackage[utf8]{inputenc}	%Necesitamos los 8 bits, por eso se usa utf8 para el ASCII
+\usepackage[spanish, es-tabla, es-nodecimaldot]{babel} %Por defecto las tablas se llaman cuadro en babel spanish, es-tabla es para definir el cuadro como tabla
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+\renewcommand\spanishchaptername{Parte}
+
+% Para ecuaciones 
+\usepackage{relsize}
+\usepackage{amsmath}
+\usepackage{siunitx}
+
+
+\usepackage{float}
+
+\usepackage{amstext}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{subcaption}
+
+% Para utilizar el Índice para navegar en el documento
+\usepackage{hyperref}	
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=magenta,      
+    urlcolor=blue,
+    citecolor=blue,    
+}
+
+\usepackage{bm}	%Es el bold map
+
+% Para la carátula. Ver qué sacar
+\usepackage[margin=0.5in]{geometry}
+\usepackage{textcomp}
+%%
+
+%\usepackage{parskip}
+\usepackage{fancyhdr}
+\usepackage{vmargin}
+\setmarginsrb{3 cm}{2.5 cm}{3 cm}{2.5 cm}{1 cm}{1.5 cm}{1 cm}{1.5 cm}
