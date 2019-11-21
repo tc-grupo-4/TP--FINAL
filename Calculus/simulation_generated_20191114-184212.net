@@ -1,0 +1,119 @@
+* C:\Users\Ian Diaz\Desktop\ITBA\TC\TP--FINAL\Calculus\simulation_generated_20191114-184212.asc
+R4_2 N001 Vin_1 {mc(R4_1,tolR)}
+R1_2 N011 N001 {mc(R1_1,tolR)}
+C1_2 N011 N001 {mc(C1_1,tolC)}
+R3_2 N002 N001 {mc(R3_1,tolR)}
+R7_2 N016 N011 {mc(R7_1,tolR)}
+R8_2 Vin_2 N016 {mc(R8_1,tolR)}
+R6_2 N016 Vin_1 {mc(R6_1,tolR)}
+C2_2 N002 N025 {mc(C2_1,tolC)}
+R2_2 N025 Vin_2 {mc(R2_1,tolR)}
+R1 N009 Vin_5 {mc(R4_5,tolR)}
+R2 N019 N009 {mc(R1_5,tolR)}
+C1 N019 N009 {mc(C1_5,tolC)}
+R3 N010 N009 {mc(R3_5,tolR)}
+R4 N022 N019 {mc(R7_5,tolR)}
+R5 Vin_6 N022 {mc(R8_5,tolR)}
+C2 N010 N028 {mc(C2_5,tolC)}
+R7 N028 Vin_6 {mc(R2_5,tolR)}
+XU1 0 N001 +VCC -VCC N011 TL082
+XU2 0 N016 +VCC -VCC Vin_2 TL082
+XU3 0 N025 +VCC -VCC N002 TL082
+XU4 0 N009 +VCC -VCC N019 TL082
+XU5 0 N022 +VCC -VCC Vin_6 TL082
+XU6 0 N028 +VCC -VCC N010 TL082
+R6 N005 Vin_3 {mc(R4_3,tolR)}
+R8 N013 N005 {mc(R1_3,tolR)}
+C3 N013 N005 {mc(C1_3,tolC)}
+R9 N006 N005 {mc(R3_3,tolR)}
+R10 N020 N013 {mc(R7_3,tolR)}
+R11 Vin_4 N020 {mc(R8_3,tolR)}
+R12 N020 Vin_3 {mc(R6_3,tolR)}
+C4 N006 N026 {mc(C2_3,tolC)}
+R13 N026 Vin_4 {mc(R2_3,tolR)}
+XU9 0 N005 +VCC -VCC N013 TL082
+XU10 0 N020 +VCC -VCC Vin_4 TL082
+XU11 0 N026 +VCC -VCC N006 TL082
+R15 N012 N003 {mc(R1_2,tolR)}
+C5 N012 N003 {mc(C1_2,tolC)}
+R16 N004 N003 {mc(R3_2,tolR)}
+R17 N018 N012 {mc(R7_2,tolR)}
+R18 Vin_3 N018 {mc(R8_2,tolR)}
+C6 N004 N024 {mc(C2_2,tolC)}
+R20 N024 Vin_3 {mc(R2_2,tolR)}
+XU7 0 N003 +VCC -VCC N012 TL082
+XU12 0 N018 +VCC -VCC Vin_3 TL082
+XU13 0 N024 +VCC -VCC N004 TL082
+R14 N024 Vin_2 {mc(R5_2,tolR)}
+V1 +VCC 0 15
+V2 0 -VCC 15
+V3 N023 0 AC 1
+R19 N017 N007 {mc(R1_4,tolR)}
+C7 N017 N007 {mc(C1_4,tolC)}
+R21 N008 N007 {mc(R3_4,tolR)}
+R22 N021 N017 {mc(R7_4,tolR)}
+R23 Vin_5 N021 {mc(R8_4,tolR)}
+C8 N008 N027 {mc(C2_4,tolC)}
+R24 N027 Vin_5 {mc(R2_4,tolR)}
+XU14 0 N007 +VCC -VCC N017 TL082
+XU15 0 N021 +VCC -VCC Vin_5 TL082
+XU16 0 N027 +VCC -VCC N008 TL082
+R25 N027 Vin_4 {mc(R5_4,tolR)}
+XU8 Vin_6 N014 VCC+ VCC- N015 TL082
+R26 N014 0 100k
+R27 N015 N014 89.1k
+R28 Vin_1 N023 50
+.inc TL082.mod
+.ac dec 100 100 100k
+* LOWPASS
+* HIGHPASS
+* LOWPASS
+* HIGHPASS
+* BANDPASS
+.param tolR=0.01
+.param tolC=0.01
+.step param run 1 20 1
+.param R1_1 5600.0
+.param R2_1 1500.0
+.param R3_1 1000.0
+.param R4_1 10000.0
+.param R6_1 1800.0
+.param R7_1 1000.0
+.param R8_1 1000.0
+.param C1_1 1e-08
+.param C2_1 1e-08
+.param R1_2 2400.0
+.param R2_2 2700.0
+.param R3_2 1000.0
+.param R5_2 3600.0
+.param R7_2 1000.0
+.param R8_2 1000.0
+.param C1_2 1e-08
+.param C2_2 1e-08
+.param R1_3 36000.0
+.param R2_3 68000.0
+.param R3_3 1000.0
+.param R4_3 36000.0
+.param R6_3 1000.0
+.param R7_3 1000.0
+.param R8_3 1000.0
+.param C1_3 1e-08
+.param C2_3 1e-08
+.param R1_4 3000.0
+.param R2_4 10000.0
+.param R3_4 1000.0
+.param R5_4 560.0
+.param R7_4 1000.0
+.param R8_4 1000.0
+.param C1_4 1e-08
+.param C2_4 1e-08
+.param R1_5 9100.0
+.param R2_5 39000.0
+.param R3_5 1000.0
+.param R4_5 6200.0
+.param R7_5 1000.0
+.param R8_5 1000.0
+.param C1_5 1e-08
+.param C2_5 1e-08
+.backanno
+.end
